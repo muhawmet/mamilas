@@ -2617,6 +2617,126 @@ ${window.v31PremiereCSV?window.v31PremiereCSV():''}`;
   }
 })();
 
+
+/* ===================== MAMILAS v33 — LIVE STAGE PREVIEW + SMARTER REFERENCES + REAL SETUPS ===================== */
+(function(){
+  if(typeof DATA==='undefined'||!DATA.refs) return;
+
+  /* ---- 1) smarter references: fill missing bestPaths/bestPalettes for all 140 refs ---- */
+  function bridge(cat){
+    var c=(cat||'').toLowerCase();
+    if(/product/.test(c))      return {p:['PRODUCT_HERO','ULTRAREAL_COMMERCIAL'],pal:['luxury_black_gold','commercial_neutral']};
+    if(/commercial\s*\/\s*auto|auto/.test(c)) return {p:['AUTOMOTIVE_MOBILITY','ULTRAREAL_COMMERCIAL'],pal:['automotive_night','warm_commercial_gold']};
+    if(/food/.test(c))         return {p:['FOOD_MACRO','ULTRAREAL_COMMERCIAL'],pal:['food_amber_macro','warm_commercial_gold']};
+    if(/tech|medical/.test(c)) return {p:['TECH_MEDICAL_PRECISION','ULTRAREAL_COMMERCIAL'],pal:['clinical_blue','commercial_neutral']};
+    if(/commercial/.test(c))   return {p:['ULTRAREAL_COMMERCIAL','PRODUCT_HERO'],pal:['commercial_neutral','warm_commercial_gold']};
+    if(/fashion|editorial/.test(c)) return {p:['FASHION_EDITORIAL','ULTRAREAL_COMMERCIAL'],pal:['editorial_monochrome','commercial_neutral']};
+    if(/architecture/.test(c)) return {p:['ARCHITECTURE_REAL_ESTATE','ULTRAREAL_COMMERCIAL'],pal:['architecture_daylight','muted_documentary']};
+    if(/document/.test(c))     return {p:['DOCUMENTARY_REALISM','LIVE_ACTION_CORPORATE'],pal:['muted_documentary','civic_morning']};
+    if(/historical|national/.test(c)) return {p:['LIVE_ACTION_CORPORATE','DOCUMENTARY_REALISM'],pal:['historical_sepia','muted_documentary']};
+    if(/cinematograph|live action|fine art/.test(c)) return {p:['ULTRAREAL_COMMERCIAL','DOCUMENTARY_REALISM','HUMAN_TESTIMONIAL'],pal:['rembrandt_amber','muted_documentary']};
+    if(/sports/.test(c))       return {p:['ULTRAREAL_COMMERCIAL','AUTOMOTIVE_MOBILITY'],pal:['commercial_neutral','automotive_night']};
+    if(/3d animation/.test(c)) return {p:['ANIMATION_EDU','STYLIZED_PREMIUM'],pal:['vibrant_clean_education','pastel_soft']};
+    if(/anime|2d animation|animation|game|stylized/.test(c)) return {p:['STYLIZED_PREMIUM','ANIMATION_EDU'],pal:['deep_space_blue','rembrandt_amber']};
+    return {p:['STYLIZED_PREMIUM','ULTRAREAL_COMMERCIAL'],pal:['deep_space_blue','commercial_neutral']};
+  }
+  DATA.refs.forEach(function(r){ var b=bridge(r.cat); if(!r.bestPaths||!r.bestPaths.length) r.bestPaths=b.p.slice(); if(!r.bestPalettes||!r.bestPalettes.length) r.bestPalettes=b.pal.slice(); });
+
+  /* ---- 2) real-world production SETUPS + cinema grammar (new category) ---- */
+  var SETUPS=[
+   {id:'setup_threepoint',name:'Three-Point Beauty Studio',cat:'Real Setup',preview:'studio',anchor:'◐',
+    use:'50-85mm; soft key + fill + hair/rim; controlled falloff; seamless or built set',dna:'clean subject/product separation, sculpted form, neutral premium control',avoid:'on-camera flash, muddy shadows, plastic skin',bestPaths:['HUMAN_TESTIMONIAL','ULTRAREAL_COMMERCIAL','PRODUCT_HERO'],bestPalettes:['skin_realism','commercial_neutral']},
+   {id:'setup_window',name:'Window-Light Testimonial',cat:'Real Setup',preview:'window',anchor:'▤',
+    use:'35-50mm at eye height; soft north-window key camera-left; gentle negative fill; real room depth',dna:'honest skin texture, off-camera eyeline, documentary calm',avoid:'beauty smoothing, fake bokeh, fake smile',bestPaths:['HUMAN_TESTIMONIAL','DOCUMENTARY_REALISM','LIVE_ACTION_CORPORATE'],bestPalettes:['skin_realism','muted_documentary']},
+   {id:'setup_tabletop',name:'Product Macro Tabletop',cat:'Real Setup',preview:'tabletop',anchor:'◆',
+    use:'90-100mm macro; single hard key + black/white flags; focus-stack feel; reflection control',dna:'surface fidelity, geometry lock, negative space, edge highlights',avoid:'plastic CGI sheen, warped logo, extra props',bestPaths:['PRODUCT_HERO','ULTRAREAL_COMMERCIAL'],bestPalettes:['luxury_black_gold','commercial_neutral']},
+   {id:'setup_verite',name:'Handheld Verite Doc',cat:'Real Setup',preview:'verite',anchor:'╲',
+    use:'35mm handheld micro-drift; available light; follow real action; no staging',dna:'imperfect human truth, motivated grit, present-tense observation',avoid:'stabilized gloss, stock smiling, staged crowd',bestPaths:['DOCUMENTARY_REALISM','LIVE_ACTION_CORPORATE','SOCIAL_REELS_REALISM'],bestPalettes:['muted_documentary','civic_morning']},
+   {id:'setup_goldenhour_auto',name:'Golden-Hour Automotive',cat:'Real Setup',preview:'goldenhour',anchor:'◜',
+    use:'24-35mm low; long warm sun rim; tracking + parallax; reflection pass on bodywork',dna:'sculptural metal, controlled glare, scale and speed',avoid:'HDR halo, fake lens flare, CGI gloss',bestPaths:['AUTOMOTIVE_MOBILITY','ULTRAREAL_COMMERCIAL'],bestPalettes:['warm_commercial_gold','automotive_night']},
+   {id:'setup_highkey',name:'High-Key Fashion Studio',cat:'Real Setup',preview:'highkey',anchor:'□',
+    use:'85-105mm; bright even key; seamless white; crisp wardrobe weave',dna:'graphic pose, clean negative space, editorial restraint',avoid:'clutter, low-contrast mud',bestPaths:['FASHION_EDITORIAL','ULTRAREAL_COMMERCIAL'],bestPalettes:['editorial_monochrome','commercial_neutral']},
+   {id:'setup_lowkey',name:'Low-Key Chiaroscuro Portrait',cat:'Real Setup',preview:'lowkey',anchor:'◑',
+    use:'85mm; single hard key + deep falloff; Rembrandt cheek; negative fill',dna:'sculpted shadow, one carved highlight, gravity and restraint',avoid:'flat fill, crushed black, beauty smoothing',bestPaths:['HUMAN_TESTIMONIAL','FASHION_EDITORIAL'],bestPalettes:['rembrandt_amber','luxury_black_gold']},
+   {id:'setup_neon_street',name:'Practical Neon Night Street',cat:'Real Setup',preview:'neonstreet',anchor:'▮',
+    use:'35mm; practical sign sources; wet-asphalt reflection; motivated colour pools',dna:'real night density, colour from sources, layered depth',avoid:'uniform neon wash, CGI haze, flat fog',bestPaths:['SOCIAL_REELS_REALISM','ULTRAREAL_COMMERCIAL','AUTOMOTIVE_MOBILITY'],bestPalettes:['automotive_night','clinical_blue']},
+   {id:'setup_overcast',name:'Overcast Soft Daylight',cat:'Real Setup',preview:'overcast',anchor:'▦',
+    use:'35-50mm; big soft sky source; low contrast; true colour',dna:'natural product/skin truth, even credible light',avoid:'flat boredom without a contrast accent',bestPaths:['DOCUMENTARY_REALISM','LIVE_ACTION_CORPORATE','ARCHITECTURE_REAL_ESTATE'],bestPalettes:['muted_documentary','architecture_daylight']},
+   {id:'setup_hardsun_desert',name:'Hard Sun Desert Commercial',cat:'Real Setup',preview:'hardsun',anchor:'◇',
+    use:'24mm; hard low/overhead sun; deep crisp shadows; restrained heat shimmer',dna:'grand scale, raking texture, bold contrast',avoid:'blown highlights, flare clutter',bestPaths:['AUTOMOTIVE_MOBILITY','ULTRAREAL_COMMERCIAL','TOURISM_DESTINATION'],bestPalettes:['warm_commercial_gold','civic_morning']},
+   {id:'setup_tungsten',name:'Tungsten Interview Warmth',cat:'Real Setup',preview:'tungsten',anchor:'◉',
+    use:'50mm; warm practical key ~3200K; soft fill; practicals as background bokeh',dna:'intimate credibility, warm honest skin, real office depth',avoid:'orange cast overload, fake bokeh balls',bestPaths:['HUMAN_TESTIMONIAL','LIVE_ACTION_CORPORATE'],bestPalettes:['warm_commercial_gold','skin_realism']},
+   {id:'setup_anamorphic',name:'Anamorphic Wide Landscape',cat:'Real Setup',preview:'anamorphic',anchor:'▭',
+    use:'wide anamorphic; horizon discipline; oval bokeh; slow parallax',dna:'grand scale through restraint, clean horizon, negative space',avoid:'tilted clutter, fake flare streaks',bestPaths:['TOURISM_DESTINATION','AUTOMOTIVE_MOBILITY','DOCUMENTARY_REALISM'],bestPalettes:['automotive_night','architecture_daylight']}
+  ];
+  var have={}; DATA.refs.forEach(function(r){have[r.id]=1;});
+  SETUPS.forEach(function(s){ if(!have[s.id]) DATA.refs.push(s); });
+
+  /* ---- 3) live game-style stage preview: previewClass follows style engine + world ---- */
+  window.previewClass=function(){
+    var st='pixar';
+    try{ st=window.activeStyleEngine?activeStyleEngine():'pixar'; }catch(e){}
+    if(typeof isRealPath==='function' && isRealPath(S.productionPath)) st='real';
+    return 'stage-'+st+' world-'+((S&&S.world)||'');
+  };
+  try{ previewClass=window.previewClass; }catch(e){}
+
+  /* ---- show active style label in the live preview ---- */
+  var STYLELBL={pixar:'3D Pixar',arcane:'Arcane',spiderverse:'Spider-Verse',ghibli:'Ghibli',anime:'Anime',claymation:'Claymation',comic:'Comic',painterly:'Painterly',real:'Live-Action'};
+  var _rr=window.renderRight||renderRight;
+  if(typeof _rr==='function'){
+    window.renderRight=function(){
+      var html=_rr.apply(this,arguments);
+      var st='pixar'; try{ st=(typeof isRealPath==='function'&&isRealPath(S.productionPath))?'real':(window.activeStyleEngine?activeStyleEngine():'pixar'); }catch(e){}
+      var lbl=STYLELBL[st]||'';
+      if(lbl && html.indexOf('<div class="pvLabel">')>-1) html=html.replace('<div class="pvLabel">','<div class="pvStyle">🎨 '+lbl+'</div><div class="pvLabel">');
+      return html;
+    };
+    try{ renderRight=window.renderRight; }catch(e){}
+  }
+
+  /* ---- 4) inject the visual CSS (game-creator feel) ---- */
+  function injectCSS(){
+    if(document.getElementById('v33css')) return;
+    var css=''
+    +'.preview .orb,.preview .line,.preview .pvLabel,.preview .pvPath,.preview:after{transition:all .42s cubic-bezier(.2,.8,.2,1)}'
+    +'.preview{cursor:default}.preview:after{content:"";position:absolute;inset:0;pointer-events:none}'
+    +'.pvStyle{position:absolute;top:12px;right:12px;font:800 10px var(--mono);letter-spacing:.5px;color:#fff;background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.25);padding:4px 8px;border-radius:99px;backdrop-filter:blur(4px);z-index:3}'
+    +'.preview.stage-spiderverse:after{background-image:radial-gradient(rgba(255,255,255,.22) 1px,transparent 1.5px);background-size:7px 7px;mix-blend-mode:overlay}'
+    +'.preview.stage-spiderverse .orb{box-shadow:3px 0 0 rgba(255,45,85,.7),-3px 0 0 rgba(0,229,255,.7)}'
+    +'.preview.stage-arcane:after{background:repeating-linear-gradient(115deg,rgba(255,255,255,.06) 0 6px,transparent 6px 15px)}'
+    +'.preview.stage-arcane .orb{filter:contrast(1.15) saturate(1.15)}'
+    +'.preview.stage-anime:after{background:linear-gradient(180deg,transparent 58%,rgba(0,0,0,.28))}'
+    +'.preview.stage-anime .orb{filter:contrast(1.35)}.preview.stage-anime .line{height:2px;opacity:.9}'
+    +'.preview.stage-claymation:after{background-image:radial-gradient(rgba(0,0,0,.13) .6px,transparent 1.1px);background-size:3px 3px}'
+    +'.preview.stage-claymation .orb{filter:saturate(1.2) brightness(1.06)}'
+    +'.preview.stage-comic:after{background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.12) 0 2px,transparent 2px 5px)}'
+    +'.preview.stage-painterly:after{background:radial-gradient(circle at 40% 30%,rgba(255,255,255,.12),transparent 42%);mix-blend-mode:soft-light}'
+    +'.preview.stage-pixar .orb{filter:brightness(1.08)}'
+    +'.preview.stage-ghibli:after{background:linear-gradient(180deg,rgba(255,255,255,.10),transparent 35%)}'
+    +'.preview.stage-real:after{background:linear-gradient(180deg,rgba(255,255,255,.06),transparent 28%,rgba(0,0,0,.4))}'
+    +'.preview.stage-real .orb{filter:blur(.4px)}.preview.stage-real .line{opacity:.55}'
+    +'.refCardPreview{transition:transform .18s ease,box-shadow .18s ease}'
+    +'.refCardPreview:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.45)}'
+    +'.card{transition:transform .12s ease}.card:active{transform:scale(.985)}'
+    +'.refCardPreview.default{background:linear-gradient(135deg,#1b2233,#0b0e16 60%,#2b3656)}'
+    +'.refCardPreview.studio{background:radial-gradient(circle at 50% 38%,#e9e4d8,#6b6f78 55%,#0c0e14)}'
+    +'.refCardPreview.window{background:linear-gradient(115deg,#d4e6ff,#5a6b82 52%,#0c0e14)}'
+    +'.refCardPreview.tabletop{background:linear-gradient(160deg,#0b0e16,#1b1f2b 50%,#d4af37 165%)}'
+    +'.refCardPreview.verite{background:linear-gradient(135deg,#3a3f49,#1c2027 60%,#5b6470)}'
+    +'.refCardPreview.goldenhour{background:linear-gradient(120deg,#ffd9a0,#e08a3c 45%,#3a2a1a)}'
+    +'.refCardPreview.highkey{background:linear-gradient(135deg,#ffffff,#e2e6ed 55%,#aab2c0)}'
+    +'.refCardPreview.lowkey{background:radial-gradient(circle at 62% 38%,rgba(202,168,106,.4),transparent 42%),linear-gradient(135deg,#05060a,#1a160f)}'
+    +'.refCardPreview.neonstreet{background:linear-gradient(135deg,#04060f,#0e3a6b 45%,#be185d)}'
+    +'.refCardPreview.overcast{background:linear-gradient(180deg,#c7cdd6,#8a9099 60%,#3a3f49)}'
+    +'.refCardPreview.hardsun{background:linear-gradient(120deg,#fff2c8,#e0a23c 42%,#7a3b12)}'
+    +'.refCardPreview.tungsten{background:radial-gradient(circle at 40% 40%,#ffcf8f,transparent 46%),linear-gradient(135deg,#1a120a,#2a1c10)}'
+    +'.refCardPreview.anamorphic{background:linear-gradient(180deg,#1b2740,#0a1020 55%,#d98a3c 165%)}';
+    var st=document.createElement('style'); st.id='v33css'; st.textContent=css; document.head.appendChild(st);
+  }
+  try{ injectCSS(); }catch(e){}
+})();
+
 (function(){
   var prev=window.buildBrief; if(typeof prev!=='function') return;
   window.buildBrief=function(){
