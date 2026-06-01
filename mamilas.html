@@ -2468,6 +2468,155 @@ ${window.v31PremiereCSV?window.v31PremiereCSV():''}`;
   try{decodeBrief=window.decodeBrief}catch(e){}
 })();
 
+
+/* ===================== MAMILAS v32 — STYLE ENGINE + SERIES + BATCH + HANDSHAKE ===================== */
+(function(){
+  if(typeof S==='undefined'||!S) return;
+  var ENGINES={
+    pixar:{label:'3D Pixar',outer:'a premium 3D Pixar-quality animated feature world',grain:'soft rounded forms, appealing dimensional staging, warm bounce light, tactile material response',forbid:'no specific studio character likeness, no copied film designs or logos'},
+    arcane:{label:'Arcane painterly',outer:'a premium painterly hand-textured animated world in the Arcane tradition',grain:'visible brush and paint texture, bold value separation, expressive rim light, graphic shadow shapes',forbid:'no Arcane or League characters, no Hextech or studio logos, no copied costumes or named powers'},
+    spiderverse:{label:'Spider-Verse comic',outer:'a premium comic-stylized animated world in the Spider-Verse tradition',grain:'half-tone Ben-Day dots, offset chromatic edges, hand-drawn motion marks, bold ink lines, mixed frame-rate snap',forbid:'no Marvel or Spider-Man characters, no copied suits, masks, web patterns or logos'},
+    ghibli:{label:'Ghibli hand-drawn',outer:'a premium hand-drawn 2D animated world in the Ghibli tradition',grain:'soft watercolour skies, gentle confident line work, natural wind motion, warm nostalgic light',forbid:'no Ghibli characters or film-specific designs'},
+    anime:{label:'Modern anime cel',outer:'a premium modern anime cel-shaded world',grain:'clean cel shading, hard light and shadow steps, expressive speed lines, saturated key accents',forbid:'no copied anime characters, uniforms, logos or signature shots'},
+    claymation:{label:'Claymation stop-motion',outer:'a premium handcrafted stop-motion claymation world',grain:'fingerprint clay texture, tiny tool marks, slight handmade imperfection, practical set light',forbid:'no studio character likeness or copied designs'},
+    comic:{label:'Graphic comic',outer:'a premium graphic comic-book illustrated world',grain:'bold ink outlines, flat colour fills, screen-tone shading, dramatic panel light',forbid:'no copied comic characters or publisher logos'},
+    painterly:{label:'Painterly cinematic',outer:'a premium painterly illustrated cinematic world',grain:'oil-paint texture, visible brushwork, chiaroscuro value contrast, motivated key light',forbid:'no copied designs, characters or logos'}
+  };
+  var DIORAMA={clay:'a handcrafted soft-clay lesson diorama',paper:'a layered pop-up paper craft lesson diorama',wood:'tactile wooden mechanism lesson props',museum:'a respectful miniature museum lesson diorama',fabric:'a stitched fabric / patchwork lesson diorama',lightbox:'a translucent lightbox lesson diorama',notebook:'a tactile notebook / sketch lesson diorama',botanical:'a handmade miniature botanical lesson diorama'};
+  function refToEngine(){
+    var ids=((S.refMix&&S.refMix.length)?S.refMix:[S.reference]).map(function(x){return String(x||'').toLowerCase()}).join(' ');
+    if(/arcane/.test(ids))return 'arcane';
+    if(/spiderverse|spider_verse|miles|gwen/.test(ids))return 'spiderverse';
+    if(/ghibli|miyazaki|shinkai|spirited|totoro/.test(ids))return 'ghibli';
+    if(/anime|naruto|bleach|jujutsu|demon_slayer|one_piece|onepiece|chainsaw|frieren|evangelion|akira|cowboy_bebop/.test(ids))return 'anime';
+    if(/laika|stopmotion|cuphead/.test(ids))return 'claymation';
+    if(/comic|cartoon|hanna|samurai_jack|batman_animated/.test(ids))return 'comic';
+    if(/rembrandt|painter|kung_fu_panda_brush|oil/.test(ids))return 'painterly';
+    if(/pixar|dreamworks|illumination|inside_out|coco|soul|wall_e|lego/.test(ids))return 'pixar';
+    return '';
+  }
+  window.activeStyleEngine=function(){ return (S.styleEngine&&ENGINES[S.styleEngine])?S.styleEngine:(refToEngine()||'pixar'); };
+  function eng(){ return ENGINES[window.activeStyleEngine()]||ENGINES.pixar; }
+  function cap(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
+  function applyStyleEngine(){
+    if(typeof S==='undefined'||!S) return;
+    if(typeof isRealPath==='function' && isRealPath(S.productionPath)) return;
+    var e=eng();
+    (DATA.worlds||[]).forEach(function(w){
+      if(w.group!=='STYLIZED') return;
+      var d=DIORAMA[w.id];
+      if(d){
+        w.render=cap(e.outer)+'; the lesson is staged as '+d+' set inside that world, with motivated key light, '+e.grain+', and clean readable composition. IP-safe original style: '+e.forbid+'.';
+        w.formula=e.label+' world shell + '+d+' inside it';
+      }else{
+        w.render=cap(e.outer)+', '+e.grain+', original IP-safe staging and silhouette, motivated cinematic light, motion-ready composition. '+e.forbid+'.';
+        w.formula=e.label+' premium stylized world';
+      }
+    });
+  }
+  window.setStyleEngine=function(id){ S.styleEngine=(id==='auto'?'':id); applyStyleEngine(); save(); render(); if(typeof toast==='function') toast('Style: '+eng().label); };
+  applyStyleEngine();
+
+  /* ---- Series DNA Lock ---- */
+  function applySeriesLock(){ var L=S.seriesLock; if(!L) return; S.project=L.project; S.productionPath=L.path; S.world=L.world; S.reference=L.reference; S.refMix=(L.refMix||[L.reference]).slice(); S.palette=L.palette; S.chars=L.chars; S.styleEngine=L.styleEngine||''; }
+  window.saveSeriesLock=function(){ S.seriesLock={project:S.project,path:S.productionPath,world:S.world,reference:S.reference,refMix:(S.refMix||[]).slice(),palette:S.palette,chars:S.chars,styleEngine:window.activeStyleEngine(),duration:S.duration}; save(); if(typeof toast==='function') toast('Series DNA locked'); render(); };
+  window.clearSeriesLock=function(){ S.seriesLock=null; save(); if(typeof toast==='function') toast('Series lock cleared'); render(); };
+
+  /* ---- wrap ingest: series lock + Görev auto-frame + style ---- */
+  var _ing=window.ingestRaw;
+  window.ingestRaw=function(){
+    applySeriesLock();
+    var r=_ing?_ing.apply(this,arguments):undefined;
+    (S.scenes||[]).forEach(function(s){
+      var generic=!s.visual||/one clear visual beat|one dominant object, one idea/i.test(s.visual);
+      if((s.onText||'')==='Görev' && generic){
+        s.visual='Interactive task hold: the dominant lesson object presents two or three EMPTY physical answer slots that glow as tactile invitations; nothing fills them — the frame withholds the answer so the child responds. One small motion hook on the empty slots, stable final hold; characters off-screen or as silent closed-mouth pointers only.';
+      }
+    });
+    applyStyleEngine(); save();
+    try{ render(); }catch(e){}
+    return r;
+  };
+  try{ ingestRaw=window.ingestRaw; }catch(e){}
+
+  /* ---- Batch ingest (=== separated multi-script) ---- */
+  window.batchIngest=function(){
+    var raw=S.briefRaw||'';
+    var parts=raw.split(/^\s*={3,}.*$/m).map(function(x){return x.trim()}).filter(Boolean);
+    if(parts.length<2){ if(typeof toast==='function') toast('Batch: en az 2 script gerekir (=== ile ayır)'); return; }
+    var snap=JSON.stringify({b:S.briefRaw,sc:S.scenes,ir:S.ingestReport});
+    var out=[];
+    parts.forEach(function(p,i){ S.briefRaw=p; try{ window.ingestRaw(); }catch(e){} out.push('################  VIDEO '+(i+1)+' / '+parts.length+'  ################\n\n'+window.buildBrief()); });
+    try{ var o=JSON.parse(snap); S.briefRaw=o.b; S.scenes=o.sc; S.ingestReport=o.ir; save(); }catch(e){}
+    if(typeof download==='function') download('mamilas_batch_'+parts.length+'_videos.txt', out.join('\n\n\n'));
+    render();
+  };
+
+  /* ---- Premiere CSV: add on_screen_text column (scope-safe append) ---- */
+  var _csv=window.v31PremiereCSV;
+  if(typeof _csv==='function'){
+    window.v31PremiereCSV=function(){
+      var out=_csv.apply(this,arguments); if(typeof out!=='string'||!out) return out;
+      var lines=out.split('\n'); var sc=S.scenes||[];
+      if(lines.length!==sc.length+1) return out;
+      return lines.map(function(ln,i){ if(i===0) return ln+',on_screen_text'; var s=sc[i-1]; var tg=(s&&s.onText&&s.onText!=='-')?s.onText:''; return ln+',"'+String(tg).replace(/"/g,'""')+'"'; }).join('\n');
+    };
+    try{ v31PremiereCSV=window.v31PremiereCSV; }catch(e){}
+  }
+
+  /* ---- razor brief + doctor->pharmacist handshake + style block ---- */
+  var _bb=window.buildBrief;
+  window.buildBrief=function(){
+    try{ applyStyleEngine(); }catch(e){}
+    var out=_bb?_bb.apply(this,arguments):'';
+    if(typeof out!=='string') return out;
+    var e=eng();
+    var styleLine='VISUAL STYLE ENGINE\nStyle: '+e.label+' — '+e.outer+'.\nGrain: '+e.grain+'.\nIP-SAFE: '+e.forbid+'. Reference is grammar only; never copy characters, logos, costumes or signature shots.\n\n';
+    var hs='\nAGENT HANDSHAKE (doctor -> pharmacist: each stage consumes the previous output verbatim)\n'
+      +'IMAGE -> MOTION: Motion animates ONLY what changes; it must not re-describe identity, world, light or text (re-description causes morphing). It carries scene id, integrated on-image text and all locks unchanged.\n'
+      +'IMAGE/MOTION -> SUNO: Suno scores the cut only; it invents no visuals or text and keeps a VO midrange pocket.\n'
+      +'ALL -> VOICE/EDIT: ElevenLabs receives speaker routing (names are VO only, never forced on-screen); Premiere receives scene order, durations, on-screen text and final holds.\n'
+      +'PRESCRIPTION RULE: every downstream prompt must run with zero questions. If a field is ambiguous, the UPSTREAM agent failed and rewrites it; the downstream agent never guesses.\n';
+    if(out.indexOf('ACTIVE SETUP\n')>-1) out=out.replace('ACTIVE SETUP\n', styleLine+'ACTIVE SETUP\n');
+    else out=styleLine+out;
+    if(out.indexOf('PROOF FAIL CONDITIONS')>-1) out=out.replace('PROOF FAIL CONDITIONS', hs+'\nPROOF FAIL CONDITIONS');
+    else out=out+hs;
+    return out;
+  };
+  try{ buildBrief=window.buildBrief; }catch(e){}
+
+  /* ---- live: re-apply style every render so picking a reference swaps the look ---- */
+  var _rnd=window.render;
+  if(typeof _rnd==='function'){
+    window.render=function(){ try{ applyStyleEngine(); }catch(e){} return _rnd.apply(this,arguments); };
+    try{ render=window.render; }catch(e){}
+  }
+
+  /* ---- UI: Style Engine selector on Reference page ---- */
+  var _pr=window.pageReference;
+  if(typeof _pr==='function'){
+    window.pageReference=function(){
+      var cur=window.activeStyleEngine();
+      var chips=Object.keys(ENGINES).map(function(k){ return '<button class="btn sm '+(S.styleEngine===k?'primary':'')+'" onclick="setStyleEngine(\''+k+'\')">'+ENGINES[k].label+'</button>'; }).join(' ');
+      var panel='<div class="box"><h3>🎨 Visual Style Engine</h3><p class="desc">Pixar yerine Arcane / Spider-Verse / anime / claymation seç — render lock, image ve motion prompt o stile döner, IP-safe kalır. Auto = seçtiğin referanstan türetir.</p><div class="row"><button class="btn sm '+(S.styleEngine?'':'primary')+'" onclick="setStyleEngine(\'auto\')">Auto (referanstan)</button> '+chips+'</div><p class="desc">Aktif stil: <b>'+eng().label+'</b></p></div>';
+      return panel+_pr.apply(this,arguments);
+    };
+    try{ pageReference=window.pageReference; }catch(e){}
+  }
+
+  /* ---- UI: Series DNA + Batch on Final page ---- */
+  var _pf=window.pageFinal;
+  if(typeof _pf==='function'){
+    window.pageFinal=function(){
+      var L=S.seriesLock;
+      var status= L ? ('KİLİTLİ → '+((by(DATA.projects,L.project)||{}).name||L.project)+' · '+((ENGINES[L.styleEngine]||{label:L.styleEngine||'auto'}).label)) : 'yok';
+      var box='<div class="box"><h3>🔒 Series DNA Lock + Batch</h3><p class="desc">Series Lock: karakter, world, palet, <b>stil</b> ve süreyi dondurur; sonraki her scriptte otomatik uygular (3000 video için marka tutarlılığı). Batch: <b>===</b> ile ayrılmış çok scripti tek seferde işleyip tek dosya indirir.</p><div class="row"><button class="btn sm primary" onclick="saveSeriesLock()">Lock current as Series</button><button class="btn sm" onclick="clearSeriesLock()">Clear lock</button><button class="btn sm" onclick="batchIngest()">Batch ingest (===)</button></div><p class="desc">Durum: <b>'+status+'</b></p></div>';
+      return box+_pf.apply(this,arguments);
+    };
+    try{ pageFinal=window.pageFinal; }catch(e){}
+  }
+})();
+
 (function(){
   var prev=window.buildBrief; if(typeof prev!=='function') return;
   window.buildBrief=function(){
