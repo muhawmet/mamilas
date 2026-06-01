@@ -1129,6 +1129,11 @@ function showLocalModeWarning(){
         w.formula='Premium 3D Pixar-quality animated education world shell + tactile wooden mechanism lesson props inside it';
         w.render='Premium 3D Pixar-quality animated education world; the lesson is staged through tactile wooden mechanism props inside that polished 3D world, with warm practical light and handmade material response.';
       }
+      var _shell={museum:'a respectful miniature museum diorama',fabric:'a stitched fabric / patchwork lesson diorama',lightbox:'a translucent lightbox lesson diorama with coloured vellum',notebook:'a tactile notebook / sketch lesson diorama',botanical:'a handmade miniature botanical lesson diorama'};
+      if(_shell[w.id] && !/world shell|inside that polished/i.test(w.render||'')){
+        w.formula='Premium 3D Pixar-quality animated education world shell + '+_shell[w.id]+' inside it';
+        w.render='Premium 3D Pixar-quality animated education world; the lesson is staged as '+_shell[w.id]+' inside that polished 3D world, with warm motivated light, tactile handmade materials and clean readable composition.';
+      }
     });
   }
   _worldShellFix();
@@ -1435,16 +1440,27 @@ function showLocalModeWarning(){
     return 'Build / Proof';
   }
   function v31TextGoal(text,i){
-    const t=low(text);
+    const raw=String(text||''); const t=low(raw);
     if(i===0 && /atatürk|mustafa/.test(t)) return 'Karakterden Başarıya';
-    if(i===0 && /neden-sonuc|neden sonuc|sebep|sonuc cumleleri/.test(t)) return 'Neden-Sonuç';
-    if(/sihirli|baglayici/.test(t)) return 'çünkü / için / dolayı';
-    if(/neden \(sebep\)|sonuc/.test(t)) return 'Neden -> Sonuç';
-    if(/ornek|örnek/.test(t)) return 'Örnek';
-    if(/gorev|not defter/.test(t)) return 'Görev';
-    if(/cumhuriyet/.test(t)) return 'Cumhuriyet';
-    if(/kararlilik|azmi|vatansever|ileri gorus/.test(t)) return 'Karakter';
-    return '-';
+    if(i===0 && /neden-sonuc|neden sonuc|sebep ve sonuc|sonuc cumleleri/.test(t)) return 'Neden-Sonuç';
+    if(/sihirli baglayici|baglayici kelime|baglac/.test(t)) return 'çünkü / için / dolayı';
+    if(/cumhuriyet/.test(t) && i<3) return 'Cumhuriyet';
+    if(/gorev|defterler|kaydedin|kaydet|yeniden yaz|asagidaki cumle|alistirma|eslestir|bulmaca|siz de yap|tamamlay|bosluk doldur/.test(t)) return 'Görev';
+    const en=raw.match(/[A-ZÇĞİÖŞÜ][a-zçğıöşü]+,\s*[A-ZÇĞİÖŞÜ][a-zçğıöşü]+\s+ve\s+[A-ZÇĞİÖŞÜ][a-zçğıöşü]+(?:\s+(?:Zaman[ıi]?|Hali|Hâli|Kural[ıi]))?/);
+    if(en) return c(en[0]).replace(/\s+/g,' ').replace(/[!.,]+$/,'').trim();
+    const cm=raw.match(/(?:[A-ZÇĞİÖŞÜ][a-zçğıöşü]+\s+){1,3}(?:Zaman[ıi]?|Hâli|Hali|Ekleri|Eki|Kuralı|Kurali|İşlemi|Islemi|Yöntemi|Yontemi|Konusu)\b/);
+    const concept=cm?c(cm[0]).replace(/\s+/g,' ').replace(/[!.,]+$/,'').trim():'';
+    let ekler='';
+    if(/\bek(ler|i)?\b|sihirli ek|son ek|tak[ıi]lan/.test(t)){
+      const toks=raw.match(/-[A-Za-zÇĞİÖŞÜçğıöşü]{1,5}/g)||[]; const u=[];
+      toks.forEach(function(x){ if(u.indexOf(x)<0) u.push(x); });
+      ekler=u.slice(0,3).join(' / ');
+    }
+    if(concept && ekler) return concept+' · '+ekler;
+    if(concept) return concept;
+    if(ekler) return ekler;
+    if(/ornek|misal/.test(t) || (raw.match(/[“”"«»][^“”"«»]{3,}?[“”"«»]/g)||[]).length>=2) return 'Örnek';
+    return '';
   }
   function v31VisualBeat(text,i){
     const t=low(text), speaker=sceneSpeaker(text);
@@ -1461,6 +1477,8 @@ function showLocalModeWarning(){
     if(/kurtulus|cumhuriyet|inkilap|harf devrimi|kadinlara/.test(t)) return 'A handcrafted historical timeline unfolds across a museum table; independence, republic and reforms appear as stable physical markers.';
     if(/zihin haritasi|ileri gorusluluk|hangi ozelligini/.test(t)) return 'A mind-map board becomes a branching path where each character trait turns into a possible future route; the final question stays as a physical card.';
     if(/ikisi birden|sonraki ders|hosca|hoşça/.test(t)) return 'The lesson world settles into a final teaching tableau with the key concept centered; Aras and Defne can appear as small closed-mouth observer silhouettes if the budget allows.';
+    const cb=String(text||'').match(/(?:[A-ZÇĞİÖŞÜ][a-zçğıöşü]+\s+){1,3}(?:Zaman[ıi]?|Hâli|Hali|Ekleri|Eki|Kuralı|Kurali|İşlemi|Islemi|Konusu)\b/);
+    if(cb) return 'A tactile clay/paper/wood lesson diorama makes "'+c(cb[0]).replace(/\s+/g,' ').trim()+'" visible: one dominant object physically changes (snaps, rises, opens, aligns or splits) so the idea reads without anyone talking on screen; one motion hook primed, stable final.';
     if(speaker==='Aras'||speaker==='Defne') return 'A world-explains tabletop beat carries the spoken idea through one dominant object; '+speaker+' is voice routing only, not automatic on-screen presence.';
     return 'One clear visual beat: one dominant object, one idea, one motion hook, no decorative character presence.';
   }
@@ -1544,8 +1562,7 @@ function showLocalModeWarning(){
     s.clipPlan=v31PlanClip(sec);
     s.ms=v31MotionSafety(sec);
     s.dur=sec>V31_WARN?'split / multi-beat':'5-6s';
-    s.tr=v31TextGoal(source,i)==='-'?'Physical Text Only':'Auto Support';
-    s.onText=v31TextGoal(source,i);
+    const _tg=v31TextGoal(source,i); s.tr=_tg?'Auto Support':'No Forced Text'; s.onText=_tg;
     s.character='Voice route: '+s.speaker+'; visible character only if scene function needs it';
     s.risk=sec>V31_WARN?'Kling risk: split or keep motion extremely simple; freeze text, face, logo and character identity.':riskDefault();
     return s;
@@ -2449,6 +2466,18 @@ ${window.v31PremiereCSV?window.v31PremiereCSV():''}`;
     return {path:best,project:by(DATA.projects,project),reason:Array.from(new Set((reasons[best]||[]).filter(x=>typeof x==='string'))).join(', ')};
   };
   try{decodeBrief=window.decodeBrief}catch(e){}
+})();
+
+(function(){
+  var prev=window.buildBrief; if(typeof prev!=='function') return;
+  window.buildBrief=function(){
+    var out=prev.apply(this,arguments);
+    if(typeof out!=='string') return out;
+    out=out.replace(/^[^\n:]{1,52}:[ \t]*-[ \t]*$/gm,'');
+    out=out.replace(/\n{3,}/g,'\n\n');
+    return out;
+  };
+  try{ buildBrief=window.buildBrief; }catch(e){}
 })();
 
 showLocalModeWarning();
