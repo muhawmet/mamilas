@@ -5,6 +5,7 @@
   "type": "module",
   "description": "MAMILAS reference engine — single-file SPA + Playwright golden/smoke/interact harness",
   "scripts": {
+    "build": "node build.mjs",
     "serve": "http-server -p 8080 -c-1 .",
     "test:gold": "node tests/gold.mjs",
     "test:gold:update": "node tests/gold.mjs --update",
