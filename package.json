@@ -1,0 +1,16 @@
+{
+  "name": "mamilas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "MAMILAS reference engine — single-file SPA + Playwright golden/smoke/interact harness",
+  "scripts": {
+    "serve": "http-server -p 8080 -c-1 .",
+    "test:gold": "node tests/gold.mjs",
+    "test:gold:update": "node tests/gold.mjs --update",
+    "test:smoke": "node tests/smoke.mjs",
+    "test:interact": "node tests/interact.mjs",
+    "test:all": "node tests/run-all.mjs",
+    "gate": "node tests/run-all.mjs"
+  }
+}
