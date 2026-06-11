@@ -1,0 +1,455 @@
+{
+  "tool": "v36_brief_validation",
+  "generatedAt": "2026-06-11T11:15:06.962Z",
+  "site": "01_SITE/mamilas.html",
+  "briefCount": 14,
+  "flags": [],
+  "results": [
+    {
+      "cat": "EDU",
+      "label": "Fen — su döngüsü",
+      "decodedPath": "ANIMATION_EDU",
+      "project": "education",
+      "register": "EDU",
+      "decodeReason": "Codex final decoder: education/tactile lesson context",
+      "pathOK": true,
+      "regOK": true,
+      "rec": {
+        "amac": "cocuk_egitim",
+        "visualPrimary": "Boyutlu Animasyon Filmi",
+        "visualAlts": [
+          "Suluboya Resimli Kitap",
+          "Temiz Düz Çizgi Film"
+        ],
+        "materials": [
+          "Yumuşak Kil",
+          "Katmanlı Kâğıt",
+          "Ahşap Mekanizma"
+        ],
+        "refs": [
+          "Pixar Dimensional Staging",
+          "Soul Warmth",
+          "Pixar — Emotional Staging Grammar"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": ""
+    },
+    {
+      "cat": "EDU",
+      "label": "Matematik — ölçme",
+      "decodedPath": "ANIMATION_EDU",
+      "project": "education",
+      "register": "EDU",
+      "decodeReason": "Codex final decoder: education/tactile lesson context · UYARI: brief çok zayıf — müşteriden süre, hedef kitle, marka/ürün ve amaç iste; aşağıdaki kurulum tahmindir.",
+      "pathOK": true,
+      "regOK": true,
+      "rec": {
+        "amac": "cocuk_egitim",
+        "visualPrimary": "Boyutlu Animasyon Filmi",
+        "visualAlts": [
+          "Suluboya Resimli Kitap",
+          "Temiz Düz Çizgi Film"
+        ],
+        "materials": [
+          "Yumuşak Kil",
+          "Katmanlı Kâğıt",
+          "Ahşap Mekanizma"
+        ],
+        "refs": [
+          "Pixar Dimensional Staging",
+          "Soul Warmth",
+          "Pixar — Emotional Staging Grammar"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": ""
+    },
+    {
+      "cat": "EDU",
+      "label": "Değerler eğitimi",
+      "decodedPath": "ANIMATION_EDU",
+      "project": "education",
+      "register": "EDU",
+      "decodeReason": "Codex final decoder: education/tactile lesson context · UYARI: brief çok zayıf — müşteriden süre, hedef kitle, marka/ürün ve amaç iste; aşağıdaki kurulum tahmindir.",
+      "pathOK": true,
+      "regOK": true,
+      "rec": {
+        "amac": "cocuk_egitim",
+        "visualPrimary": "Boyutlu Animasyon Filmi",
+        "visualAlts": [
+          "Suluboya Resimli Kitap",
+          "Temiz Düz Çizgi Film"
+        ],
+        "materials": [
+          "Yumuşak Kil",
+          "Katmanlı Kâğıt",
+          "Ahşap Mekanizma"
+        ],
+        "refs": [
+          "Pixar Dimensional Staging",
+          "Soul Warmth",
+          "Pixar — Emotional Staging Grammar"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": "no explicit edu keyword except \"eğitim\""
+    },
+    {
+      "cat": "REAL",
+      "label": "Ticari marka filmi",
+      "decodedPath": "FOOD_MACRO",
+      "project": "food_macro",
+      "register": "REAL",
+      "decodeReason": "Codex final decoder: food/macro context",
+      "pathOK": true,
+      "regOK": true,
+      "rec": {
+        "amac": "urun_makro",
+        "visualPrimary": "Makro Ürün Gerçekliği",
+        "visualAlts": [
+          "Klinik Beyaz Hassasiyet"
+        ],
+        "materials": [],
+        "refs": [
+          "Food Macro Satisfaction",
+          "Food Tabletop Macro Grammar",
+          "Red Beverage Refresh Grammar"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": "kahve => food macro by design"
+    },
+    {
+      "cat": "REAL",
+      "label": "Genel ticari reklam",
+      "decodedPath": "TECH_MEDICAL_PRECISION",
+      "project": "tech_medical",
+      "register": "REAL",
+      "decodeReason": "Codex final decoder: tech/medical precision context",
+      "pathOK": true,
+      "regOK": true,
+      "rec": {
+        "amac": "urun_makro",
+        "visualPrimary": "Klinik Beyaz Hassasiyet",
+        "visualAlts": [
+          "Makro Ürün Gerçekliği"
+        ],
+        "materials": [],
+        "refs": [
+          "Tech Glass Edge Light",
+          "Luxury Watch — Macro Precision Grammar",
+          "Tech Clinical Glass Grammar"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": "\"teknoloji\" routes to tech/medical"
+    },
+    {
+      "cat": "PRODUCT",
+      "label": "Telefon kılıfı",
+      "decodedPath": "PRODUCT_HERO",
+      "project": "product_hero",
+      "register": "REAL",
+      "decodeReason": "Codex final decoder: product hero context, weak product packaging context",
+      "pathOK": true,
+      "regOK": true,
+      "rec": {
+        "amac": "urun_makro",
+        "visualPrimary": "Makro Ürün Gerçekliği",
+        "visualAlts": [
+          "Klinik Beyaz Hassasiyet"
+        ],
+        "materials": [],
+        "refs": [
+          "Product Macro Commercial",
+          "Food Macro Satisfaction",
+          "Tech Glass Edge Light"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": ""
+    },
+    {
+      "cat": "PRODUCT",
+      "label": "Kozmetik ambalaj",
+      "decodedPath": "PRODUCT_HERO",
+      "project": "product_hero",
+      "register": "REAL",
+      "decodeReason": "product/packaging keywords · UYARI: brief çok zayıf — müşteriden süre, hedef kitle, marka/ürün ve amaç iste; aşağıdaki kurulum tahmindir.",
+      "pathOK": true,
+      "regOK": true,
+      "rec": {
+        "amac": "urun_makro",
+        "visualPrimary": "Makro Ürün Gerçekliği",
+        "visualAlts": [
+          "Klinik Beyaz Hassasiyet"
+        ],
+        "materials": [],
+        "refs": [
+          "Product Macro Commercial",
+          "Food Macro Satisfaction",
+          "Tech Glass Edge Light"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": ""
+    },
+    {
+      "cat": "INST",
+      "label": "Belediye 23 Nisan",
+      "decodedPath": "LIVE_ACTION_CORPORATE",
+      "project": "event_real",
+      "register": "REAL",
+      "decodeReason": "Codex final decoder: civic/public context",
+      "pathOK": true,
+      "regOK": true,
+      "rec": {
+        "amac": "belgesel_kurumsal",
+        "visualPrimary": "Sıcak İç Mekân",
+        "visualAlts": [
+          "Belgesel İnsan Gerçekliği",
+          "Arşiv / Anma"
+        ],
+        "materials": [],
+        "refs": [
+          "Civic Documentary",
+          "Street Documentary Reels",
+          "Destination Documentary"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": "expect event_real project"
+    },
+    {
+      "cat": "INST",
+      "label": "Kurumsal belgesel",
+      "decodedPath": "LIVE_ACTION_CORPORATE",
+      "project": "municipality_real",
+      "register": "REAL",
+      "decodeReason": "civic/public keywords · UYARI: brief çok zayıf — müşteriden süre, hedef kitle, marka/ürün ve amaç iste; aşağıdaki kurulum tahmindir.",
+      "pathOK": true,
+      "regOK": true,
+      "rec": {
+        "amac": "belgesel_kurumsal",
+        "visualPrimary": "Belgesel İnsan Gerçekliği",
+        "visualAlts": [
+          "Sıcak İç Mekân",
+          "Arşiv / Anma"
+        ],
+        "materials": [],
+        "refs": [
+          "Civic Documentary",
+          "Street Documentary Reels",
+          "Destination Documentary"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": ""
+    },
+    {
+      "cat": "STY",
+      "label": "Anime aksiyon",
+      "decodedPath": "STYLIZED_PREMIUM",
+      "project": "stylized_premium",
+      "register": "STY",
+      "decodeReason": "Codex final decoder: stylized premium context",
+      "pathOK": true,
+      "regOK": true,
+      "rec": {
+        "amac": "premium_stilize",
+        "visualPrimary": "Dokulu Ressamlık Dünyası",
+        "visualAlts": [
+          "Klasik Yağlı Boya",
+          "Güçlü Grafik Afiş"
+        ],
+        "materials": [],
+        "refs": [
+          "Arcane Texture Grammar",
+          "Ghibli Organic Light",
+          "Spider-Verse-like Graphic Motion Grammar (IP-safe)"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": ""
+    },
+    {
+      "cat": "STY",
+      "label": "Arcane premium",
+      "decodedPath": "STYLIZED_PREMIUM",
+      "project": "stylized_premium",
+      "register": "STY",
+      "decodeReason": "Codex final decoder: stylized premium context · UYARI: brief çok zayıf — müşteriden süre, hedef kitle, marka/ürün ve amaç iste; aşağıdaki kurulum tahmindir.",
+      "pathOK": true,
+      "regOK": true,
+      "rec": {
+        "amac": "premium_stilize",
+        "visualPrimary": "Dokulu Ressamlık Dünyası",
+        "visualAlts": [
+          "Klasik Yağlı Boya",
+          "Güçlü Grafik Afiş"
+        ],
+        "materials": [],
+        "refs": [
+          "Arcane Texture Grammar",
+          "Ghibli Organic Light",
+          "Spider-Verse-like Graphic Motion Grammar (IP-safe)"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": ""
+    },
+    {
+      "cat": "EDGE",
+      "label": "Eğitim + ürün çakışması",
+      "decodedPath": "ANIMATION_EDU",
+      "project": "education",
+      "register": "EDU",
+      "decodeReason": "Codex final decoder: education/tactile lesson context",
+      "pathOK": null,
+      "regOK": null,
+      "rec": {
+        "amac": "cocuk_egitim",
+        "visualPrimary": "Boyutlu Animasyon Filmi",
+        "visualAlts": [
+          "Suluboya Resimli Kitap",
+          "Temiz Düz Çizgi Film"
+        ],
+        "materials": [
+          "Yumuşak Kil",
+          "Katmanlı Kâğıt",
+          "Ahşap Mekanizma"
+        ],
+        "refs": [
+          "Pixar Dimensional Staging",
+          "Soul Warmth",
+          "Pixar — Emotional Staging Grammar"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": "hits both eğitim AND ürün/logo; later rule wins — inspect"
+    },
+    {
+      "cat": "EDGE",
+      "label": "Belgesel + moda çakışması",
+      "decodedPath": "FASHION_EDITORIAL",
+      "project": "fashion_editorial",
+      "register": "REAL",
+      "decodeReason": "Codex final decoder: fashion editorial context · UYARI: brief çok zayıf — müşteriden süre, hedef kitle, marka/ürün ve amaç iste; aşağıdaki kurulum tahmindir.",
+      "pathOK": null,
+      "regOK": null,
+      "rec": {
+        "amac": "gercek_reklam",
+        "visualPrimary": "Karanlık Editoryal Stüdyo",
+        "visualAlts": [
+          "Sinematik Gerçek Reklam",
+          "Gece Şehir Reklamı"
+        ],
+        "materials": [],
+        "refs": [
+          "Vogue Editorial Light",
+          "Golden Hour Motivated Warmth",
+          "Anamorphic Epic Scale"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": "hits moda AND belgesel; inspect precedence"
+    },
+    {
+      "cat": "EDGE",
+      "label": "Otomobil + sosyal medya",
+      "decodedPath": "AUTOMOTIVE_MOBILITY",
+      "project": "automotive_mobility",
+      "register": "REAL",
+      "decodeReason": "Codex final decoder: automotive/mobility context · UYARI: brief çok zayıf — müşteriden süre, hedef kitle, marka/ürün ve amaç iste; aşağıdaki kurulum tahmindir.",
+      "pathOK": null,
+      "regOK": null,
+      "rec": {
+        "amac": "gercek_reklam",
+        "visualPrimary": "Gece Şehir Reklamı",
+        "visualAlts": [
+          "Sinematik Gerçek Reklam",
+          "Karanlık Editoryal Stüdyo"
+        ],
+        "materials": [],
+        "refs": [
+          "Automotive Commercial Grammar",
+          "Beauty Skincare — Skin Glow Grammar",
+          "Golden Hour Motivated Warmth"
+        ]
+      },
+      "refExport": {
+        "effective": 1,
+        "suppressed": 0,
+        "suppressedNames": []
+      },
+      "coverage": 100,
+      "note": "hits otomobil AND reels/instagram; inspect"
+    }
+  ]
+}

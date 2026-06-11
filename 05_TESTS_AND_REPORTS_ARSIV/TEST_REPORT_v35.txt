@@ -1,0 +1,32 @@
+MAMILAS PRIME v35 TEST REPORT
+Date: 2026-06-10
+
+PASS node --check
+PASS DOM-shim runtime load
+PASS 25/25 project canonical-state transitions
+PASS 17/17 path canonical-state transitions
+PASS project/path canonical tuple equality from two poisoned starting states
+PASS decoder scenarios and 100% source coverage
+PASS 172/172 ref purpose coverage
+PASS Game Art Direction 48/48 coverage and multi-purpose split
+PASS 172 refs x REAL/STY/EDU effective/suppressed export partition
+PASS snapshot-to-v35 canonical technical data regression
+PASS selected/effective/suppressed ref behavior
+PASS REAL incompatible-ref suppression
+PASS hybrid-mode ref override
+PASS EXACT / TURKISH_GENERATED / NO_TEXT
+PASS quoted/labeled source EXACT extraction
+PASS motion visible-text freeze
+PASS bulk image/motion text-state propagation
+PASS final brief and Proof Turkish visible-text lock
+PASS Recipe / Prompt Lab / Final and supporting route renders
+PASS Turkish Recipe labels and 45 Turkish micro-guides
+PASS Turkish palette labels and v35 visible shell
+PASS Teaching subgroups, DNA-family subgroups and adaptive 1-3 suggestions
+PASS setter register locks and max-three Reference selection
+PASS all project Final Brief/Image/Motion/Suno/Agent output matrix
+PASS 8 GPT/Claude agent contracts
+PASS 4 knowledge contracts
+PASS all agent and knowledge files <= 8000 bytes
+
+PASS Browser visual smoke through localhost: Recipe EDU/REAL, Prompt Lab expanded prompts, Final, shell and desktop layout.
