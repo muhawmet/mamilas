@@ -1,4 +1,4 @@
-# MAMILAS CORE LAWS — PRIME v37
+# MAMILAS CORE LAWS — PRIME v37.1
 
 ## Prescription model
 
@@ -105,6 +105,12 @@ Estimate whether each scene fits one 5–6 second beat. When source meaning, VO 
 ## Character allocation
 
 Plan character appearances across the complete episode before scene writing. Character scenes carry emotion, curiosity, reaction, scale or closure. Never place a character merely because their name begins the VO line. State any manual ratio override in the dossier so IMAGE does not reapply the default.
+
+## Creative bar
+
+Cliché blacklist — a route or scene built on these dies on sight: lightbulb=idea, handshake=deal, puzzle piece=solution, globe=global, rising graph or arrow=growth, magic particle swirl, domino chain=consequence, chess piece=strategy, balance scale=choice, opening door=opportunity, maze=problem, dartboard=goal, growing tree=development, turning gears=process. These are rung-1 stock symbols; MAMILAS operates at rung 3–4.
+
+Serial variation — across consecutive projects in the same series, never reuse the same mechanism family (cards, bridges, portals, vitrines, conveyors...); change at least two of material / mechanism / scale.
 
 ## Failure patterns
 

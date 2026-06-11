@@ -1,4 +1,4 @@
-# MAMILAS CORE LAWS — PRIME v37
+# MAMILAS CORE LAWS — PRIME v37.1
 
 ## Prescription model
 

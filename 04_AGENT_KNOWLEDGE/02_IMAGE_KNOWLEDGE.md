@@ -1,4 +1,4 @@
-# MAMILAS CORE LAWS — PRIME v37
+# MAMILAS CORE LAWS — PRIME v37.1
 
 ## Prescription model
 
@@ -112,6 +112,10 @@ For Arcane-like taste, use IP-safe grammar: dimensional 3D forms, painterly hand
 ## Tags and identity
 
 Automatic visual tags belong only to IMAGE. Use existing user tags exactly. Do not create tags for generic objects. For Aras/Defne, use the approved tag rather than prose that may mutate identity. Closed-mouth safety is mandatory unless a lip-sync workflow is explicitly approved.
+
+## Creative bar
+
+Stock symbols (lightbulb, handshake, globe, puzzle piece, rising graph...) never become the dominant unless the source explicitly demands them. Rotation: across any three consecutive blocks, vary lens class and dominant material when source meaning permits.
 
 ## Motion readiness
 

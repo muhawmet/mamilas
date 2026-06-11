@@ -1,3 +1,24 @@
+# MAMILAS PRIME v37 / v37.1 — Changelog
+
+## v37.1 (2026-06-11, aynı gün ikinci tur)
+
+- **Claude ajanları tek dosyaya indi** (`03_CLAUDE_AGENTS/*`): talimat + yasa birleşik,
+  tekrarsız. Claude Project'e SADECE bu yapıştırılır, knowledge upload edilmez —
+  mesaj başına sabit maliyet belirgin düşer, kural kaybı sıfır. `04_AGENT_KNOWLEDGE`
+  artık yalnız GPT içindir.
+- **Dahi modu** (IDEA + IMAGE, GPT+Claude): klişe karaliste (ampul, el sıkışma, puzzle,
+  küre, yükselen grafik, sihir tozu, domino, satranç, terazi, kapı, labirent, hedef
+  tahtası, büyüyen ağaç, dişli) — görüldüğü an rota ölür; seri varyasyon kuralı —
+  ardışık projelerde aynı mekanizma ailesi tekrarlanamaz, malzeme/mekanizma/ölçekten
+  ikisi değişir; IMAGE'de ardışık 3 blokta lens sınıfı + baskın malzeme rotasyonu.
+- **`05_GLOBAL_BRAIN/`**: hesap seviyesi dost-beyin — claude.ai Profile tercihi +
+  ChatGPT Custom Instructions (≤1500 karakter/alan). Kanka tonu, sıfır yalakalık,
+  leb demeden leblebi, kendiliğinden usage/pratik ipucu verme yetkisi.
+- **`06_USAGE_GUIDE.md`**: 10 kurallık usage kartı (model yönlendirme, 3-revizyon
+  kuralı, tek brief, görsel hijyeni, büyük tarama işlerini sohbette yapmama).
+- Tüm dosya başlıkları v37.1'e hizalandı.
+
+
 # MAMILAS PRIME v37 — Changelog
 
 Date: 2026-06-11

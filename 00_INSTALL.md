@@ -1,6 +1,6 @@
-# MAMILAS PRIME v37 — Installation
+# MAMILAS PRIME v37.1 — Installation
 
-Baseline: 2026-06-11 v37
+Baseline: 2026-06-11 v37.1
 
 ## Concept: doctor → prescription → pharmacy
 
@@ -33,13 +33,25 @@ For each GPT:
 - Upload only its matching file from `04_AGENT_KNOWLEDGE` as Knowledge.
 - Do not attach another specialist's knowledge.
 
-## Claude setup
+## Claude setup (v37.1: single file)
 
 For each Claude Project:
-- Use the matching file from `03_CLAUDE_AGENTS` as the project instruction.
-- Add only the matching knowledge file from `04_AGENT_KNOWLEDGE` to project knowledge.
+- Paste the matching file from `03_CLAUDE_AGENTS` into Project instructions. That file
+  now contains instruction + law merged; do NOT upload any knowledge file.
+- `04_AGENT_KNOWLEDGE` is for GPT only.
 - Supply Final Brief, scene source and approved images as task context per conversation,
   never as permanent knowledge.
+
+## Global brain (account level, optional but recommended)
+
+The Project agents do not carry into ordinary chats. For an always-on production
+brain, paste `05_GLOBAL_BRAIN/CLAUDE_PREFERENCES.md` into claude.ai Settings → Profile,
+and `05_GLOBAL_BRAIN/GPT_CUSTOM_INSTRUCTIONS.md` into ChatGPT Custom Instructions.
+
+## Usage
+
+Read `06_USAGE_GUIDE.md` — ten rules that keep Claude Pro usable for serial production
+(model routing, the 3-revision rule, one-brief-per-conversation, image hygiene).
 
 ### Usage economy (Claude)
 
