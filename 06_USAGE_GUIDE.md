@@ -24,3 +24,8 @@ yeniden sayılır. Usage'ı yakan ajanlar değil, çalışma şekli.
 9. **Extended thinking'i üretim turlarında kapat;** sadece konsept/zor karar turunda aç.
 10. **Dürüst matematik:** Pro + Opus + uzun karma sohbet = yetmez. Pro + tek-dosya
     ajanlar + model yönlendirme + 3-tur kuralı = seri üretime yeter.
+
+11. **DESIGN revizyon döngüsü:** üretilen görseli DESIGN ajanına yapıştır → kilit-kilit
+    DIFF + KEEP/CHANGE + tek tam revize prompt döner. Tur başına TEK görsel, en fazla
+    ~3 tur; sonrası yeni sohbet (sadece sorunlu formatın bloğu + ilgili kilit satırları).
+    Konsept (IDEA design modu) Opus/Fable, format uygulaması (DESIGN) Sonnet.
