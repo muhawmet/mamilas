@@ -42,12 +42,11 @@ For each Claude Project:
 - Supply Final Brief, scene source and approved images as task context per conversation,
   never as permanent knowledge.
 
-## Gemini setup (Gems)
+## Gemini
 
-For each Gemini Gem, paste the matching file from `07_GEMINI_AGENTS` into the Gem's
-Instructions field — single file, no uploads needed. Gemini's weak spot is inventing
-facts and "evidence"; every Gemini agent therefore carries a GROUNDING section. For any
-reasoning work, select the Pro/Thinking model — never leave the chat on Flash.
+Gemini is NOT a production agent in this system. It is the daily assistant and the
+trusted third opinion for when Claude/GPT fail. Its only setup is the saved-info
+brain below; for any reasoning work select the Pro/Thinking model, never Flash.
 
 ## Global brain (account level, optional but recommended)
 

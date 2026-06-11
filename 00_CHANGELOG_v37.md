@@ -17,12 +17,12 @@
 - **`06_USAGE_GUIDE.md`**: 10 kurallık usage kartı (model yönlendirme, 3-revizyon
   kuralı, tek brief, görsel hijyeni, büyük tarama işlerini sohbette yapmama).
 - Tüm dosya başlıkları v37.1'e hizalandı.
-- **Gemini desteği:** `07_GEMINI_AGENTS/` — 4 tek-dosya Gem ajanı (Claude v37.1
-  içeriği + Gemini'ye özel GROUNDING bölümü: kanıt/detay uydurma yasağı,
-  FACT-vs-CHOICE ayrımı, "emin misin?" karşısında savunma yerine yeniden kontrol,
-  uzun batch'te kilit satırlarına dönüş). `05_GLOBAL_BRAIN/GEMINI_SAVED_INFO.md` —
-  hesap seviyesi beyin: KESİN/YORUM/TAHMİN etiketi, yalakalık açılışı yasağı,
-  bilmiyorum > uydurma; not: muhakeme işinde Flash değil Pro/Thinking model.
+- **Gemini:** üretim ajanı YOK (kullanıcı kararı — Gemini günlük asistan +
+  Claude/GPT çözemeyince üçüncü akıl). Tek kurulum:
+  `05_GLOBAL_BRAIN/GEMINI_SAVED_INFO.md` — güven odaklı hesap beyni:
+  KESİN/YORUM/TAHMİN etiketi, kanıt uydurma yasağı, "emin misin?" karşısında
+  savunma yerine yeniden kontrol, yalakalık açılışı yasağı, hesap verisinde
+  "baktım/bakamadım" dürüstlüğü; not: muhakemede Flash değil Pro/Thinking.
 
 
 # MAMILAS PRIME v37 — Changelog
