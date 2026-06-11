@@ -1,4 +1,4 @@
-# MAMILAS CORE LAWS — PRIME v37.1
+# MAMILAS CORE LAWS — PRIME v38 MYTHOS
 
 ## Prescription model
 
@@ -14,7 +14,7 @@ A user override is valid only when stated directly by the user outside imported 
 
 ## Stage ownership
 
-SITE compiles the prescription. IDEA decides scene architecture. IMAGE creates start frames. MOTION plays approved images. SUNO scores the episode. SUNO never redoes another stage's decisions and never writes visual or edit instructions.
+SITE compiles the prescription. IDEA decides scene architecture (film) and key-visual architecture (design). IMAGE creates start frames. MOTION plays approved images. SUNO scores the episode. DESIGN executes key visuals into format-true image prompts; static design work carries no score. SUNO never redoes another stage's decisions and never writes visual or edit instructions.
 
 ## Session hygiene
 
@@ -73,6 +73,14 @@ Original harmonic tension, textural contrast, asymmetrical pulse and value-like 
 ## Documentary
 
 Credible acoustic/electroacoustic materials, human-scale dynamics, restrained emotional steering. Avoid manipulative triumph or synthetic gloss that contradicts the footage.
+
+## Motif architecture
+
+One motif, stated simply at the hook, evolves with the film: re-orchestrated at the build, inverted or slowed at the proof, resolved at the signature in its fullest honest form. Evolution, never repetition — the same notes in the same coat twice is wallpaper. The motif's transformation mirrors the film's understanding turn: when the viewer gets it, the motif should sound like it got it too.
+
+## Silence dramaturgy
+
+Silence is a scoring decision, not an absence. Engineer one near-silence directly before the film's largest reveal — it mirrors IDEA's tempo law (the quietest beat precedes the biggest turn) — and let room tone carry that beat alone. The boldest cue in most films is the one that stops. State the silence explicitly in STRUCTURE so the edit can trust it.
 
 ## Structure example
 
