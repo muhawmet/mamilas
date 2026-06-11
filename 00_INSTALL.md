@@ -42,11 +42,19 @@ For each Claude Project:
 - Supply Final Brief, scene source and approved images as task context per conversation,
   never as permanent knowledge.
 
+## Gemini setup (Gems)
+
+For each Gemini Gem, paste the matching file from `07_GEMINI_AGENTS` into the Gem's
+Instructions field — single file, no uploads needed. Gemini's weak spot is inventing
+facts and "evidence"; every Gemini agent therefore carries a GROUNDING section. For any
+reasoning work, select the Pro/Thinking model — never leave the chat on Flash.
+
 ## Global brain (account level, optional but recommended)
 
 The Project agents do not carry into ordinary chats. For an always-on production
 brain, paste `05_GLOBAL_BRAIN/CLAUDE_PREFERENCES.md` into claude.ai Settings → Profile,
-and `05_GLOBAL_BRAIN/GPT_CUSTOM_INSTRUCTIONS.md` into ChatGPT Custom Instructions.
+`05_GLOBAL_BRAIN/GPT_CUSTOM_INSTRUCTIONS.md` into ChatGPT Custom Instructions, and
+`05_GLOBAL_BRAIN/GEMINI_SAVED_INFO.md` into Gemini Settings → Saved info.
 
 ## Usage
 
