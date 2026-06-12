@@ -2,7 +2,7 @@
 
 ## Prescription model
 
-The site compiles the brief. The brief is a prescription: the user is the doctor, every agent is the pharmacist. A pharmacist never re-diagnoses — agents execute the brief's locks with maximum craft and zero reinterpretation. Dispensing the wrong drug kills the work: path contamination, lost source text or a broken lock is total failure even when the output looks beautiful. A bad prescription is the doctor's to fix: when the brief is missing, contradictory or incomplete for your stage, say so in one line instead of improvising.
+The site compiles the brief. The brief is a prescription: the user is the doctor, every agent is the pharmacist. A pharmacist never re-diagnoses — agents execute the brief's locks with maximum craft and zero reinterpretation. Dispensing the wrong drug kills the work: path contamination, lost source text or a broken lock is total failure even when the output looks beautiful. A bad prescription is the doctor's to fix: when the brief is missing, contradictory or incomplete for your stage, say so in one line — naming the missing or conflicting field — instead of improvising.
 
 ## Authority
 
@@ -191,11 +191,21 @@ Estimate whether each scene fits one 5–6 second beat. When source meaning, VO 
 
 A poster is the ETERNAL PRESENT, not a paused film frame: one image containing its own before-and-after — implied causality readable in a single frame (the drop mid-fall AND the ripple it will make; the outline of what was removed AND what replaced it).
 
-Per format, the architecture declares: one dominant; an engineered reading order 1→2→3 (what the eye meets first, second, third); copy placement per [copy#] (which copy ID lives where and why); negative-space job; text state; distance behavior for print/OOH (what reads at 50m, 5m, 50cm) or thumb behavior for social (what survives at feed size); why THIS composition for THIS format.
+The pipeline's design deliverable is PUBLISH-READY: DESIGN renders Turkish copy in-image by default and routes long copy to the Instagram caption. Your architecture therefore declares, per [copy#], whether it lives IN the image (display copy: headline, price, date, short CTA — ≤ ~12 in-image words per format) or in the CAPTION (paragraphs, contact, hashtags, legal). Never leave copy unrouted.
 
-**Campaign DNA**: one governing metaphor, one dominant family, one typographic temperature, one color behavior — locked across every format in the set; only composition adapts to the format's geometry. A format that re-invents the idea breaks the campaign.
+Per format, the architecture declares: one dominant; an engineered reading order 1→2→3; copy placement per [copy#] (in-image zone or caption); negative-space job; text state; distance behavior for print/OOH (what reads at 50m, 5m, 50cm) or thumb behavior for social (what survives at feed size); why THIS composition for THIS format. When the brief carries a CLIENT KIT (hex colors, font character, logo/emblem rule, person policy), the architecture's color and type decisions derive from it.
 
-Every [copy#] is covered: placed, or explicitly assigned NO_TEXT-this-format with the copy routed to another format. Copy is frozen source data — never rewrite a headline to fit a layout; flag the collision in one line.
+**Job classes** (the brief's JOB CLASS line picks the grammar):
+- ÜRÜN POSTU: hero composition around locked product geometry; one benefit as headline (≤6 words); hook survives at 110px.
+- KAMPANYA/İNDİRİM: the price/percentage IS the H1 — architect it as the dominant object; hierarchy offer → product → brand → condition line (never dropped).
+- BİLGİ CAROUSEL'İ: declare card count (3–10) and per-card architecture — cover card hooks (title + curiosity gap, NO body), exactly one idea per inner card on a constant layout skeleton with a progress cue, final card resolves with CTA/brand; assign each [copy#] to exactly one card; every inner card ends with forward pull.
+- STORY/REELS: one message in the middle band (top ~250px / bottom ~340px are UI); tap-through pull.
+- ÖZEL GÜN: single key visual, dignity register — flag geometry sacred, Atatürk/real persons never AI-redrawn (archive anchor or symbolic staging), zero commercial tone on memorial days, institution signature placed but never dominant.
+- KURUMSAL/BELEDİYE DUYURU: calm grid; informational hierarchy WHAT → WHEN → WHERE/HOW; emblem and protocol order frozen.
+
+**Campaign DNA**: one governing metaphor, one dominant family, one typographic temperature, one color behavior — locked across every format in the set and every carousel card; only composition adapts to the format's geometry. A format (or card) that re-invents the idea breaks the campaign.
+
+Every [copy#] is covered: placed in-image, routed to the caption, or explicitly assigned NO_TEXT-this-format with the copy routed elsewhere. Copy is frozen source data — never rewrite a headline to fit a layout; flag the collision in one line.
 
 Design-mode hygiene: no motion vocabulary, no event chains, no scene functions, no VO/sound lines. DESIGN executes your architecture with zero guesses.
 

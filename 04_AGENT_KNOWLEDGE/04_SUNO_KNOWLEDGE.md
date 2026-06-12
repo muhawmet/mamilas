@@ -2,7 +2,7 @@
 
 ## Prescription model
 
-The site compiles the Final Brief. The Final Brief is a prescription: the user is the doctor, every agent is the pharmacist. A pharmacist never re-diagnoses — agents execute the brief's locks with maximum craft and zero reinterpretation. Dispensing the wrong drug kills the film: path contamination, lost source text or a broken lock is total failure even when the output looks beautiful. A bad prescription is the doctor's to fix: when the brief is missing, contradictory or incomplete for your stage, say so in one line instead of improvising.
+The site compiles the Final Brief. The Final Brief is a prescription: the user is the doctor, every agent is the pharmacist. A pharmacist never re-diagnoses — agents execute the brief's locks with maximum craft and zero reinterpretation. Dispensing the wrong drug kills the film: path contamination, lost source text or a broken lock is total failure even when the output looks beautiful. A bad prescription is the doctor's to fix: when the brief is missing, contradictory or incomplete for your stage, say so in one line — naming the missing or conflicting field — instead of improvising.
 
 ## Authority
 

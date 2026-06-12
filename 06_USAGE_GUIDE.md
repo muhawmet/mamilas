@@ -25,7 +25,12 @@ yeniden sayılır. Usage'ı yakan ajanlar değil, çalışma şekli.
 10. **Dürüst matematik:** Pro + Opus + uzun karma sohbet = yetmez. Pro + tek-dosya
     ajanlar + model yönlendirme + 3-tur kuralı = seri üretime yeter.
 
-11. **DESIGN revizyon döngüsü:** üretilen görseli DESIGN ajanına yapıştır → kilit-kilit
+11. **DESIGN revizyon döngüsü:** üretilen görseli DESIGN ajanına yapıştır → önce GLİF
+    KONTROLÜ (ş ğ ı İ ç ö ü — bozuksa otomatik ilk CHANGE satırı), sonra kilit-kilit
     DIFF + KEEP/CHANGE + tek tam revize prompt döner. Tur başına TEK görsel, en fazla
     ~3 tur; sonrası yeni sohbet (sadece sorunlu formatın bloğu + ilgili kilit satırları).
     Konsept (IDEA design modu) Opus/Fable, format uygulaması (DESIGN) Sonnet.
+12. **DESIGN çıktısı yayına hazırdır:** yazı görselin İÇİNDE üretilir (EXACT kilit),
+    uzun metin caption bloğunda hazır gelir — Photoshop adımı yok. Carousel işinde
+    kart başına bir blok; kapak kartı + iç kartlar + CTA kartı tek kampanyadır.
+    Özel gün/belediye işinde ÖZEL GÜN sınıfının saygı kuralları otomatik devrededir.

@@ -22,16 +22,21 @@ only agent brain.
 2. IMAGE  — Nano Banana 2 start frames
 3. MOTION — Kling 3.0 i2v blocks
 4. SUNO   — Suno v5.5 music bed
-5. DESIGN — graphic studio: posters/afiş, social, covers, billboards + corporate set
-   (kartvizit, rollup, sunum kapağı, etiket). Scouts the best image engine per job on
-   the web — enable web access/browsing for this agent where the platform allows.
-   Works three ways: site DESIGN BRIEF + IDEA architecture (pipeline), brief-only,
-   or standalone freelance (asks a 5-line mini brief).
+5. DESIGN — static-image production studio, the photo equivalent of the video agents:
+   Instagram-ready posts (ürün postu, kampanya/indirim, bilgi carousel'i, story/reels),
+   özel gün visuals (national/religious/memorial — municipal grade), kurumsal duyuru,
+   plus print/OOH (afiş, billboard, CLP, rollup) and corporate spec sheets. Multi-client:
+   the brief's CLIENT KIT defines each project's identity. Scouts the best image engine
+   per job on the web (Turkish text fidelity first) — enable web access/browsing for
+   this agent where the platform allows. Works three ways: site DESIGN BRIEF + IDEA
+   architecture (pipeline), brief-only, or standalone freelance (5-line mini brief).
 
-Design pipeline: site DESIGN mode compiles the DESIGN BRIEF → IDEA (key-visual concept)
-→ DESIGN (engine choice + format-true prompts + typography plan + reference-image
-revision rounds). Default output is text-free art + a typography plan you set in
-Photoshop/Figma; in-image text only on explicit request.
+Design pipeline: site DESIGN mode compiles the DESIGN BRIEF → IDEA (key-visual concept,
+job-class aware) → DESIGN (engine choice + publish-ready prompts + Instagram caption +
+glyph-QA revision rounds). DEFAULT output renders Turkish copy IN the image (EXACT lock,
+ğ ş ı İ ç ö ü checked first in every revision) — the result is posted directly, no
+Photoshop step. A typography plan exists only on explicit request or for vector
+corporate pieces (kartvizit, etiket).
 
 Do not install MASTER, PROOF or CLIENT as daily agents; their useful checks are embedded
 in the production agents' SELF-CHECK sections.
@@ -40,7 +45,12 @@ in the production agents' SELF-CHECK sections.
 
 For each GPT:
 - Paste the matching file from `02_GPT_AGENTS` into Instructions.
-- Upload only its matching file from `04_AGENT_KNOWLEDGE` as Knowledge.
+  IMPORTANT: Custom GPT Instructions hard-limit is 8,000 characters. Every file in
+  `02_GPT_AGENTS` is kept under that limit by design; if you edit one, re-check with a
+  character count before pasting — a silently truncated instruction is a broken agent.
+- Upload only its matching file from `04_AGENT_KNOWLEDGE` as Knowledge. The knowledge
+  file is NOT optional: the instruction files delegate their detailed law (concept
+  engine, job-class grammar, format physics) to knowledge on purpose.
 - Do not attach another specialist's knowledge.
 
 ## Claude setup (single file)
