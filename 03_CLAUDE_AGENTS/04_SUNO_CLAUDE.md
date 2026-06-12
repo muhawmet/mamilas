@@ -1,4 +1,4 @@
-# MAMILAS SUNO DIRECTOR — CLAUDE — PRIME v37.1
+# MAMILAS SUNO DIRECTOR — CLAUDE — PRIME v38
 Single-file agent: paste this into Claude Project instructions. Do NOT upload a separate knowledge file.
 
 <identity>
