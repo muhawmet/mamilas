@@ -1,4 +1,53 @@
-# MAMILAS — Changelog (2026-06-12)
+# MAMILAS — Changelog
+
+## 2026-06-12 (ikinci tur) — Ajan beyinleri v2 + Codex devir paketi
+
+### DESIGN ajanı yeniden hizalandı (asıl iş)
+- Kimlik değişti: "poster tasarımcısı" → **yayına hazır statik tasarım üreticisi**
+  (videonun foto karşılığı). Photoshop/Figma adımı kaldırıldı; tipografi planı
+  yalnız açık istek üzerine veya vektör kurumsal işlerde (kartvizit, etiket).
+- Varsayılan ters çevrildi: Türkçe yazı artık **görselin İÇİNDE** üretilir (EXACT
+  kilit, görsel başına ≤ ~12 kelime, tek H1); paragraf/iletişim/yasal metin
+  **CAPTION bloğuna** yönlenir (Instagram'a hazır).
+- **GLİF QA protokolü:** ş ğ ı İ ç ö ü her revizyon DIFF'inde İLK kontrol;
+  latinize glif = otomatik ilk CHANGE satırı.
+- **İş sınıfları eklendi:** ÜRÜN POSTU · KAMPANYA/İNDİRİM · BİLGİ CAROUSEL'İ
+  (kapak kancası + kart başına tek fikir + CTA kartı, sabit iskelet) ·
+  STORY/REELS · **ÖZEL GÜN** (bayrak geometrisi kutsal, Atatürk/gerçek kişi asla
+  AI ile yeniden çizilmez, anma gününde ticari ton sıfır — belediye düzeyi resmî
+  denetime dayanıklı) · KURUMSAL/BELEDİYE DUYURU · PRINT/OOH.
+- **CLIENT KIT yasası:** çok-müşterili çalışma için marka renkleri (hex), font
+  karakteri, logo/amblem kuralı, kişi/maskot politikası mutlak yasa; kit yoksa
+  ajan türetir ve `KIT: derived` der. Ürün geometrisi/amblem asla yeniden çizilmez.
+- Engine scout güçlendi: ilk kriter **Türkçe yazı sadakati**; (scouted/fallback)
+  etiketi zorunlu.
+
+### IDEA ve ortak ajan düzeltmeleri
+- IDEA design modu iş-sınıfı farkındalığı kazandı (carousel kart mimarisi, özel
+  gün tek-kare saygı kuralları, copy'nin in-image/caption yönlendirmesi).
+- Tüm ajanlara **eksik-brief davranışı**: eksik kilit → tek satır eksik-alan
+  talebi; asla uydurma.
+- **GPT 8.000 karakter limiti çözüldü:** 01_IDEA_GPT (9.657→7.979) ve
+  05_DESIGN_GPT (10.327→7.790) artık Custom GPT Instructions'a sığıyor; detay
+  yasalar knowledge dosyalarına taşındı (knowledge yükleme artık zorunlu).
+
+### Site onarımları
+- Sahne kaynağı elle düzenlenince `sourceEnd/sourceLen/sourceHash` artık güncel
+  kalıyor; `mergePair()` birleşen sahnenin `sourceEnd`'ini doğru taşıyor
+  (coverage hesabını bozabilen iki veri bütünlüğü hatası).
+- `ingestRaw`'a 60.000 karakter kaynak guard'ı (performans koruması).
+
+### Codex devir paketi
+- `08_CODEX_BRIEFS/`: üç oturumluk, kabul kriterli iş emirleri —
+  SESSION_1 (DESIGN modunu yeni kontrata büyütme: client kit, jobClass, carousel,
+  özel gün, caption yönlendirme), SESSION_2 (ingestRaw zinciri refactor'u, gate
+  eksik-alan sözleşmeleri, harness'e brief-kontrat + sourceEnd testleri),
+  SESSION_3 (kalıntı/ölü buton taraması, mobil doğrulama, doküman senkronu,
+  release zip).
+
+---
+
+## 2026-06-12 (ilk tur)
 
 Kısa ve dürüst: bu turda ne değişti, ne değişmedi.
 
