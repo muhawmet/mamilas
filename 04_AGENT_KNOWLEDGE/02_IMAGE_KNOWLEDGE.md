@@ -1,4 +1,4 @@
-# MAMILAS CORE LAWS — PRIME v38
+# MAMILAS CORE LAWS
 
 ## Prescription model
 
@@ -14,11 +14,11 @@ A user override is valid only when stated directly by the user outside imported 
 
 ## Source integrity
 
-Preserve `[text#]` IDs, order and characters exactly. Never merge, omit, reorder, paraphrase or silently repair customer copy unless the user asks. Every submitted character stays traceable to a scene.
+Preserve `[text#]` and `[copy#]` IDs, order and characters exactly. Never merge, omit, reorder, paraphrase or silently repair customer copy unless the user asks. Every submitted character stays traceable to a scene or a format.
 
 ## Stage ownership
 
-SITE compiles the prescription. IDEA decides scene architecture. IMAGE creates start frames. MOTION plays approved images. SUNO scores the episode. Each agent owns its stage and never redoes another stage's decisions.
+SITE compiles the prescription. IDEA decides scene architecture (film) and key-visual architecture (design). IMAGE creates start frames. MOTION plays approved images. SUNO scores the episode. DESIGN executes key visuals into format-true image prompts. Each agent owns its stage and never redoes another stage's decisions.
 
 ## Session hygiene
 
@@ -104,6 +104,18 @@ Name a lens only when it governs perception: 18–24mm for inside-object scale o
 ## Lighting
 
 Light needs a source, direction, quality, temperature and job. A deep blue key may carve separation; scientific cool fill may preserve readability; a gold insight rim may mark the answer. These are physical light behaviors, never flat palette fills. Keep readable darks and one intentional emphasis.
+
+## Light dramaturgy
+
+Light is the scene's silent narrator — beyond a source, it carries INTENT. Decide what the light knows that the viewer doesn't yet: light that CONCEALS (the answer sits in the one shadowed area the camera will enter), light that ASKS (two competing sources until the proof picks one), light that CONFIRMS (the insight rim lands only on the final state). A frame where light merely exposes the subject is craft; a frame where light argues the scene's value shift is direction. The dossier's scene function chooses the intent: Hook light asks, Reveal light discloses, Resolution light settles warm and single-source.
+
+## Composition psychology
+
+The eye is pulled, in order of force, by: faces and eye-lines → highest value contrast → warmest/most saturated color → largest scale → directional lines. Stack these forces on the path the scene needs; scatter them and the viewer bounces. An eye-line inside the frame is a command — whatever the subject looks at, the viewer inspects next. Place the motion seed where the eye lands SECOND: the viewer should already be reading the frame when it begins to move.
+
+## Static key visual (eternal present)
+
+When a standalone static frame is explicitly requested (no motion stage planned), the motion-seed law is replaced by the eternal-present law: one frame containing its own before-and-after — implied causality readable in a single image. All other laws hold unchanged. Multi-format design execution belongs to DESIGN.
 
 ## Original 3D painterly branch
 

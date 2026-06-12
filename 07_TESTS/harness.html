@@ -1,0 +1,104 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAMILAS Test Harness</title>
+<style>
+body{font:13px/1.5 ui-monospace,monospace;background:#0b0c10;color:#cfd2da;padding:20px;max-width:900px;margin:auto}
+h1{color:#f5c842}.pass{color:#7ee787}.fail{color:#ff7b72}button{padding:10px 18px;font:700 13px ui-monospace;background:#f5c842;border:none;border-radius:8px;cursor:pointer}
+#frame{width:1px;height:1px;opacity:0;position:absolute;pointer-events:none}
+pre{white-space:pre-wrap;background:#14151b;padding:12px;border-radius:8px}
+</style>
+<h1>MAMILAS — Otomatik Test Harness</h1>
+<p>mamilas.html'i gizli bir iframe'de açar; Semantic Beat Planner segmentasyon testlerini,
+stale-state geçiş matrisini, gate sözleşmesini ve kaynak bütünlüğünü canlı çalıştırır.
+Testler beklenen DAVRANIŞI doğrular, sadece PASS döndürmez.</p>
+<button onclick="runAll()">Testleri çalıştır</button>
+<pre id="out">Hazır.</pre>
+<iframe id="frame" src="../mamilas.html"></iframe>
+<script>
+function log(s,cls){var o=document.getElementById('out');o.innerHTML+='\n<span class="'+(cls||'')+'">'+s+'</span>';}
+async function runAll(){
+  document.getElementById('out').textContent='Çalışıyor…';
+  var fr=document.getElementById('frame');
+  // iframe'i temiz state ile yeniden yükle
+  await new Promise(function(res){fr.onload=res;fr.src='../mamilas.html?harness='+Date.now();});
+  var W=fr.contentWindow;
+  try{W.localStorage.clear();}catch(e){}
+  await new Promise(function(res){fr.onload=res;fr.src='../mamilas.html?harness2='+Date.now();});
+  W=fr.contentWindow;
+  var S=W.S, pass=0, fail=0;
+  function ok(name,cond,info){
+    if(cond){pass++;log('PASS  '+name,'pass');}
+    else{fail++;log('FAIL  '+name+(info?' — '+info:''),'fail');}
+  }
+  function ingest(text,mode){S.beatMode=mode||'dengeli';S.briefRaw=text;S.rawVault=text;W.ingestRaw();return S.scenes;}
+  W.setProject('education'); // deterministik başlangıç register'ı
+
+  log('— Semantic Beat Planner —');
+  var s=ingest('Merhaba Aras. Bugün suyun üç halini öğreneceğiz.');
+  ok('Selamlama + ders tek beat (2 mekanik klip → 1)',s.length===1,'count='+s.length);
+  ok('Kaynak kapsama %100',S.ingestReport.coverage===100,String(S.ingestReport.coverage));
+  s=ingest('Su buharlaşıyor. Yukarı çıkıyor. Bulut oluyor.');
+  ok('Aynı görsel olayı süren üç kısa cümle birleşir',s.length===1,'count='+s.length);
+  s=ingest('Aras kutuyu açar ve içine bakar. İşte karşınızda yeni robotumuz!');
+  ok('Kısa reveal ayrı kalır',s.length===2,'count='+s.length);
+  s=ingest('Aras topu fırlatır ve top havada yavaşça süzülürken Defne not defterine hızı kaydeder.');
+  ok('Tek cümledeki iki bağımsız olay anlamsal sınırdan bölünür',s.length===2&&/Defne/.test(s[1].source),'count='+s.length);
+  s=ingest('Aras: Bak, buz eriyor. Defne: Evet, su oluyor.');
+  ok('Konuşmacı değişimi tek başına bölmez',s.length===1,'count='+s.length);
+  W.setPath('PRODUCT_HERO');
+  s=ingest('NOVA kılıf logosu net durur. Mat yüzey ışığı kırar.');
+  ok('Logo/ürün riski varken birleştirme yapılmaz',s.length===2,'count='+s.length);
+  W.setProject('education');
+  var L='Merhaba çocuklar! Ben Defne. Bugün Aras ile birlikte suyun üç halini öğreneceğiz. Su bazen sıvıdır, bardağımızın içinde durur. Bazen katıdır, buzdolabında buz olur. Bazen de gaz olur, kaynayan tencereden buhar olarak yükselir. Aras buz küpünü güneşe koyar. Buz yavaşça erimeye başlar ve su damlaları oluşur. Sonra su ısınır, ısınır, ısınır ve buhar olup havaya karışır. Buhar gökyüzünde soğur ve bulutları oluşturur. Bulutlar ağırlaşınca yağmur olarak yeryüzüne düşer. İşte buna su döngüsü diyoruz. Sen de evde bir bardak suya bakıp hangi halde olduğunu söyleyebilir misin? Haydi birlikte tekrar edelim: katı, sıvı, gaz!';
+  ingest(L,'dengeli');var dp=JSON.parse(JSON.stringify(S.beatPlan));
+  ingest(L,'ekonomik');var ep=JSON.parse(JSON.stringify(S.beatPlan));
+  ok('Uzun eğitim: dengeli < mekanik klip',dp.clips<dp.mechClips,dp.clips+' vs '+dp.mechClips);
+  ok('Uzun eğitim: ekonomik < dengeli klip',ep.clips<dp.clips,ep.clips+' vs '+dp.clips);
+  ok('Üretilen saniye tasarrufu raporlanır',ep.savedSec>0,'saved='+ep.savedSec+'s');
+  log('  dengeli: '+dp.clips+' klip / '+dp.genSec+'s · ekonomik: '+ep.clips+' klip / '+ep.genSec+'s · mekanik: '+dp.mechClips+' klip / '+dp.mechGenSec+'s');
+  S.beatMode='dengeli';
+
+  log('— Stale-State Geçiş Matrisi —');
+  var edu='Merhaba Aras! Bugün suyun üç halini öğreneceğiz. Su bazen katı, bazen sıvı, bazen gazdır.';
+  function leakLines(t,re){return t.split('\n').filter(function(l){return !/negative|forbidden|never|fail|yasak|contamination/i.test(l)&&re.test(l);});}
+  var eduLeak=/pixar|tactile clay|lesson table|route map|diorama|Aras and Defne may/i;
+  function transit(name,from,to,leakRe){
+    if(from.project)W.setProject(from.project);else W.setPath(from.path);
+    S.briefRaw=edu;S.rawVault=edu;W.ingestRaw();
+    if(to.project)W.setProject(to.project);else W.setPath(to.path);
+    var img=W.primeImagePromptAt(0)||'',mot=W.primeMotionPromptAt(0)||'';
+    var bad=leakLines(img,leakRe).concat(leakLines(mot,leakRe));
+    var g=W.productionGate();
+    ok(name,bad.length===0&&g.hardFailures.length===0,(bad[0]||g.hardFailures[0]||'').slice(0,90));
+  }
+  transit('Eğitim → Ultra Real Commercial',{project:'education'},{path:'ULTRAREAL_COMMERCIAL'},eduLeak);
+  transit('Eğitim → Product Hero',{project:'education'},{path:'PRODUCT_HERO'},eduLeak);
+  transit('Eğitim → Human Testimonial',{project:'education'},{path:'HUMAN_TESTIMONIAL'},eduLeak);
+  transit('Eğitim → Automotive',{project:'education'},{path:'AUTOMOTIVE_MOBILITY'},eduLeak);
+  transit('Ultra Real → Eğitim',{path:'ULTRAREAL_COMMERCIAL'},{project:'education'},/photoreal commercial|packshot|macro product/i);
+  transit('Product Hero → Civic',{path:'PRODUCT_HERO'},{path:'LIVE_ACTION_CORPORATE'},/macro product|packshot/i);
+  transit('Stylized → Tech/Medical',{path:'STYLIZED_PREMIUM'},{path:'TECH_MEDICAL_PRECISION'},/anime|painterly|arcane/i);
+
+  log('— Mod İzolasyonu + Gate —');
+  var v1=JSON.stringify({s:S.scenes.length,p:S.productionPath,r:S.rawVault});
+  W.toggleStudioMode();var dm=W.mamilasMode();W.toggleStudioMode();
+  ok('Video↔Design state izolasyonu',dm==='design'&&v1===JSON.stringify({s:S.scenes.length,p:S.productionPath,r:S.rawVault}));
+  S.briefRaw='';S.rawVault='';try{W.ingestRaw();}catch(e){}
+  var g2=W.productionGate();
+  ok('Boş brief: gate ihracı bloklar',g2.verdict==='FAIL'||g2.hardFailures.length>0,g2.verdict);
+
+  log('— Manuel Düzenleme Kalıcılığı —');
+  W.setProject('education');
+  // Manuel modda atomlar korunur; Birleştir butonu kullanıcı kararıdır.
+  ingest('Merhaba çocuklar! Bugün mıknatısı öğreneceğiz. Mıknatıs demiri çeker. Kuzey kutbu güney kutbunu çeker.','manuel');
+  var n0=S.scenes.length;
+  ok('Manuel modda otomatik birleştirme yok',n0>=3,'n0='+n0);
+  W.beatMergeAt(0);
+  ok('Birleştir butonu sahneleri birleştirir',S.scenes.length===n0-1,'n='+S.scenes.length);
+  var stored=JSON.parse(W.localStorage.getItem('mamilas_reference_engine')||'{}');
+  ok('Manuel birleştirme kaydedilir',(stored.scenes||[]).length===n0-1,'stored='+(stored.scenes||[]).length);
+  S.beatMode='dengeli';
+
+  log('');
+  log('SONUÇ: '+pass+' PASS / '+fail+' FAIL', fail?'fail':'pass');
+}
+</script>

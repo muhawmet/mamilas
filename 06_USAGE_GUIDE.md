@@ -6,7 +6,7 @@ yeniden sayılır. Usage'ı yakan ajanlar değil, çalışma şekli.
 
 1. **Konsept işi (IDEA, rota seçimi) → Opus/Fable, KISA sohbette.** Gerçek zekâ işi bu;
    parayı buraya harca, işi bitir, sohbeti kapat.
-2. **Toplu üretim (IMAGE/MOTION/SUNO blokları) → Sonnet.** v37.1 tek-dosya talimatlar
+2. **Toplu üretim (IMAGE/MOTION/SUNO blokları) → Sonnet.** Tek-dosya talimatlar
    zekânın çoğunu taşıyor; yapılandırılmış derlemede fark minimal, usage ~1/5.
 3. **3 revizyon kuralı:** aynı sohbette en fazla ~3 tur revizyon. Sonrası yeni sohbet —
    sadece sorunlu sahnenin [text#] bloğunu + brief'in ilgili kilit satırlarını taşı,
@@ -24,3 +24,8 @@ yeniden sayılır. Usage'ı yakan ajanlar değil, çalışma şekli.
 9. **Extended thinking'i üretim turlarında kapat;** sadece konsept/zor karar turunda aç.
 10. **Dürüst matematik:** Pro + Opus + uzun karma sohbet = yetmez. Pro + tek-dosya
     ajanlar + model yönlendirme + 3-tur kuralı = seri üretime yeter.
+
+11. **DESIGN revizyon döngüsü:** üretilen görseli DESIGN ajanına yapıştır → kilit-kilit
+    DIFF + KEEP/CHANGE + tek tam revize prompt döner. Tur başına TEK görsel, en fazla
+    ~3 tur; sonrası yeni sohbet (sadece sorunlu formatın bloğu + ilgili kilit satırları).
+    Konsept (IDEA design modu) Opus/Fable, format uygulaması (DESIGN) Sonnet.

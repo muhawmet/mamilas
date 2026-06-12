@@ -1,6 +1,6 @@
-# MAMILAS PRIME v38 — Installation
+# MAMILAS — Installation
 
-Baseline: 2026-06-12 v38
+Baseline: 2026-06-12
 
 ## Concept: doctor → prescription → pharmacy
 
@@ -18,14 +18,20 @@ only agent brain.
 
 ## Install five production agents
 
-1. IDEA   — concept + scene architecture (the only inventing stage; v38: character +
-   story craft, worked examples, SATIŞ/İTİRAZ pitch lines per route)
+1. IDEA   — concept + scene/key-visual architecture (the only inventing stage)
 2. IMAGE  — Nano Banana 2 start frames
 3. MOTION — Kling 3.0 i2v blocks
 4. SUNO   — Suno v5.5 music bed
-5. DESIGN — posters/afiş, social posts, thumbnails, corporate set. Works with a Final
-   Brief OR standalone (asks a 5-line mini brief). Scouts the best image engine per job
-   on the web — enable web access/browsing for this agent where the platform allows.
+5. DESIGN — graphic studio: posters/afiş, social, covers, billboards + corporate set
+   (kartvizit, rollup, sunum kapağı, etiket). Scouts the best image engine per job on
+   the web — enable web access/browsing for this agent where the platform allows.
+   Works three ways: site DESIGN BRIEF + IDEA architecture (pipeline), brief-only,
+   or standalone freelance (asks a 5-line mini brief).
+
+Design pipeline: site DESIGN mode compiles the DESIGN BRIEF → IDEA (key-visual concept)
+→ DESIGN (engine choice + format-true prompts + typography plan + reference-image
+revision rounds). Default output is text-free art + a typography plan you set in
+Photoshop/Figma; in-image text only on explicit request.
 
 Do not install MASTER, PROOF or CLIENT as daily agents; their useful checks are embedded
 in the production agents' SELF-CHECK sections.
@@ -37,7 +43,7 @@ For each GPT:
 - Upload only its matching file from `04_AGENT_KNOWLEDGE` as Knowledge.
 - Do not attach another specialist's knowledge.
 
-## Claude setup (v37.1: single file)
+## Claude setup (single file)
 
 For each Claude Project:
 - Paste the matching file from `03_CLAUDE_AGENTS` into Project instructions. That file
@@ -66,7 +72,7 @@ Read `06_USAGE_GUIDE.md` — ten rules that keep Claude Pro usable for serial pr
 
 ### Usage economy (Claude)
 
-v37 agents are written to protect your usage budget:
+The agents are written to protect your usage budget:
 - Production output is single-pass, all scenes in one message, no preamble/closing text.
 - Agents never echo the brief or source text back; they reference [text#] IDs.
 - Reasoning happens silently; only the deliverable is printed.
@@ -85,18 +91,11 @@ IDEA is optional only when the Final Brief already contains a complete source-bo
 Dossier. IMAGE and MOTION may infer scene craft but may not replace project, path or
 world locks.
 
-## v37 reinstall
+## Reinstall
 
 Replace all four production-agent instructions and all four matching knowledge files.
-Do not keep v36 or older instructions or knowledge attached beside v37 files.
+Do not keep older instructions or knowledge attached beside the current files.
 
-v37 changes:
-- Prescription protocol in every agent: brief-first, one-line BLOCKED on contradiction,
-  fresh-prescription session hygiene.
-- Output discipline + silent self-check in every agent (quality and usage economy).
-- Single consistent version across instructions and knowledge (no v34/v35 drift).
-- Knowledge CORE LAWS unified, including the v35 canonical text states
-  (EXACT / TURKISH_GENERATED / NO_TEXT) and effective Reference DNA rules.
 
 ## File policy
 

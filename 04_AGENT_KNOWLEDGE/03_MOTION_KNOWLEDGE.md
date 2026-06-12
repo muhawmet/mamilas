@@ -1,4 +1,4 @@
-# MAMILAS CORE LAWS — PRIME v38
+# MAMILAS CORE LAWS
 
 ## Prescription model
 
@@ -62,9 +62,17 @@ Never direct separate props, particles, leaves, steam, distant figures, machiner
 4. Light or surface answers the same motion.
 5. Everything settles into a 1–1.5 second final hold.
 
+## Micro-timing and weight
+
+Weight writes the timing. Heavy objects start late, travel slow and land once with no bounce; light objects start instantly and settle with one soft overshoot; liquid arrives in a front then relaxes; fabric follows a half-beat behind its cause. Give every event a weight and let the weight dictate its curve, described in plain physical words — Kling reads behavior, never curve names: "the drawer glides the last centimeter slower and seats flush", not "ease-out".
+
+The settle is a statement: an abrupt stop reads mechanical, one soft overshoot reads alive, a long damped landing reads premium. Choose the settle character by scene function — proof beats settle decisively, resolution beats settle softly. The final hold is part of the music: what the frame does in its last second is what the viewer remembers.
+
 ## Camera storytelling
 
 Give the camera one narrative purpose: follow an established route, pass an existing foreground layer, reveal consequence before cause, shift scale, create restrained parallax, push through a visible opening. A deliberate lock is valid. Never default to decorative push-ins, orbits or remote observation. Never invent unseen space, cut, create reverse angles, leave supported space or pair fragile geometry with aggressive camera. Strong camera is acceptable only with a simple stable event; complex object behavior requires calmer camera and fixed anchors.
+
+Camera speed is emotional tempo: a slow push is growing understanding, a held lock is confidence, a gentle drift is unease or wonder, a measured lateral pass is comparison. The same physical move at two speeds is two different sentences; match pace to the scene's value shift, never to a house style.
 
 ## Morph-risk control
 
