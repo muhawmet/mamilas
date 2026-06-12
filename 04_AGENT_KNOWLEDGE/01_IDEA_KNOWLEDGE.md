@@ -93,28 +93,58 @@ A governing metaphor governs: it carries every scene (film) or every format (des
 MAMILAS characters are closed-mouth; behavior is the dialogue. Four mandatory parts before a character's first scene:
 
 - **WANT** — what they visibly pursue on screen.
-- **NEED** — what the story knows they lack; never stated, only staged.
-- **CONTRADICTION** — two true things that grind: meticulous hands, impatient feet.
+- **NEED** — what the story knows they lack; never stated, only staged; different from the want.
+- **FLAW** — what drives their wrong first choice.
+- **CONTRADICTION** — two true things that grind: the brave kid who triple-knots her shoelaces; the meticulous baker with flour on his glasses.
 - **HABIT** — a repeatable physical tell that scenes can spend: she tests every surface with a knuckle before trusting it.
 
-Behavior beats over poses: a character never "stands curious" — they DO a specific thing only this person would do. He lines the fallen pieces up by size before rebuilding; she gives her chair to the model and watches standing.
+Behavior beats over poses: a character never "stands curious" — they DO a specific thing only this person would do. He lines the fallen pieces up by size before rebuilding; she gives her chair to the model and watches standing. In a silent 5–6s beat, character is revealed only through a CHOICE under small pressure — what they reach for first, what they hesitate before, what they refuse to put down, which of two paths they take when nobody explains.
+
+**Brand characters**: one silhouette-readable shape, one signature gesture, one rule they never break.
 
 **Casting test**: silently swap the character into an unrelated project. If the scenes still work, the character is wallpaper — rebuild from the contradiction up. A character earns the frame only when removing them changes the meaning, not just the population.
 
 **Arc in miniature**: once per episode the habit collides with the lesson/message; that collision is the character's value shift and lands near the understanding turn, never in scene one.
 
-**Aras + Defne**: allocation law unchanged; on top of it, every visible appearance spends one character-specific micro-choice. They are two different children with two different habits, and the difference must be legible inside the preset's silence.
+**Aras + Defne**: allocation law unchanged; on top of it, every visible appearance spends one character-specific micro-choice. Persistent behavioral signatures: Aras tests the world by touching first and thinking second; Defne measures twice before trusting once. Every reaction beat is characterful — never a generic child gasp.
 
 **New characters**: start from the obvious archetype, invert exactly one axis, add contradiction + habit + want/need. Silhouette readable at poster distance. Never introduce a character a [text#] does not need.
 
 ## Dramaturgy laws
 
+Name the episode's emotional curve before writing scenes (e.g., wonder → tension → relief → pride); functions and techniques serve that curve.
+
 - **Value shift** — every scene enters at one charge and exits at another: safe→exposed, known→doubted, scattered→ordered, promised→proven. A scene that ends where it began is dead weight regardless of frame beauty. Name the shift before writing the scene.
-- **Setup/payoff** — every reveal's seed is planted at least one scene earlier as an unremarked physical detail. Nothing pays off unset; nothing is set up unpaid. A rewatch must show the answer was always in frame.
+- **Setup/payoff** — every reveal's seed is planted at least one scene earlier as an unremarked physical detail. Nothing pays off unset; nothing is set up unpaid. Minimum one PLANT→PAYOFF pair per episode, both ends marked in the dossier (PLANT in scene X, PAYOFF in scene Y). A rewatch must show the answer was always in frame.
 - **But/therefore chain** — adjacent scenes connect by "but" or "therefore", never "and then". If two scenes can swap positions without damage, the chain is broken; reorder meaning through staging — [text#] order stays sacred.
 - **Deletion test** — remove the scene mentally: if the film still argues its case, the scene is dead. Give it a job (plant a setup, turn a value, escalate the chain) or fold its beat into a neighbor via a dossier split note.
 - **Tempo** — scenes vary in density and breath like bars of music. The single quietest beat sits directly before the largest reveal. The signature scene resolves; it never introduces.
 - **Subtext** — at least one beat per episode where image and meaning are in productive tension. Irony is a precision tool: it sharpens commercial and stylized work; in EDU and memorial registers it is gentle or absent.
+
+## Structural techniques
+
+Chosen by name, used on purpose:
+
+- **Cold open** — start inside the most interesting consequence; explain afterward.
+- **Consequence-first** — show the result, then the cause; the gap is the curiosity engine.
+- **Rule of three** — two repetitions establish the pattern; the third breaks it, and the break is where the message lives.
+- **Misdirect→reveal** — stage an honest misread, then disclose. Never cheat the viewer with information that was hidden unfairly.
+- **Adjacency meaning (Kuleshov)** — order scenes so each frame re-colors the previous one; two ordinary shots in the right order beat one spectacular shot.
+
+## Worked calibration triplets
+
+The gap between levels is the skill — match the GENIUS level:
+
+- **EDU (su döngüsü)**: WEAK "A diagram of the water cycle with arrows." → STRONG "A soft-clay sea exhales a cotton cloud that drifts up the paper mountain and wrings itself out into a riverbed." → GENIUS "The classroom's forgotten tea glass fogs the window beside it; a fingertip draws the fog into a river running back down the glass, and the droplet rejoins the tea. The cycle was sitting on the desk all along." (the lesson hides inside a familiar object)
+- **STYLIZED**: WEAK "A hero stands on a rooftop at sunset." → STRONG "A silhouetted figure plants a flag of light; an amber rim cuts through blue smoke." → GENIUS "Across the city, lit windows go dark one by one — until the remaining lights form the hero's emblem; the figure on the rooftop only lifts their head." (the world performs the character)
+- **REAL (kahve markası)**: WEAK "Steaming coffee cup on a wooden table, morning light." → STRONG "A barista's palm rests on the grinder until its hum settles; the first pour folds in slow ribbons." → GENIUS "Dawn shift: the espresso machine's pressure needle trembles at the red line, then eases — and across the counter, a tired customer's shoulders ease at exactly the same moment." (machine state mirrored to human state = the promise without a word)
+
+## Pitch layer
+
+Every route closes with two lines the user can read to a client verbatim:
+
+- **SATIŞ** — one client-facing sentence on why this route wins, in audience/money terms, zero jargon.
+- **İTİRAZ** — the most likely client objection and its one-line answer.
 
 ## Scene architecture
 

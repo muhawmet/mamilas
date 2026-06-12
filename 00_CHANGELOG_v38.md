@@ -1,13 +1,25 @@
-# MAMILAS PRIME v38 MYTHOS — Changelog (2026-06-11)
+# MAMILAS PRIME v38 MYTHOS — Changelog (2026-06-12)
+
+> Not: v38 iki paralel oturumda geliştirildi ve bu sürümde SENTEZLENDİ.
+> Oturum A (PR #4): motor kâşifi, yazısız-varsayılan tipografi planı, kurumsal set,
+> pitch katmanı (SATIŞ/İTİRAZ), işlenmiş örnek üçlüleri, test arşivi.
+> Oturum B (bu branch): konsept/dramaturji motorları, format fiziği + DIFF revizyon
+> protokolü, IMAGE/MOTION/SUNO derinlik pası ve sitenin VIDEO/DESIGN modu.
+> Aşağıdaki içerik birleşik son durumdur.
 
 ## Yeni: DESIGN hattı (tam grafik stüdyo)
 
 - **DESIGN ajanı** (`02_GPT_AGENTS/05_DESIGN_GPT.md`, `03_CLAUDE_AGENTS/05_DESIGN_CLAUDE.md`,
   `04_AGENT_KNOWLEDGE/05_DESIGN_KNOWLEDGE.md`): afiş, sosyal medya, kapak, thumbnail,
   billboard, etkinlik görseli. Format fiziği (billboard 3sn/100m, CLP backlit, story UI
-  bölgeleri, thumbnail 168px), tipografi yasası (tek-H1, Türkçe diakritik yasası, in-render
-  vs TYPO SPEC), okuma sırası mühendisliği, kampanya DNA kilidi, **revizyon protokolü**:
-  üretilen görseli yapıştır → kilit-kilit DIFF → KEEP/CHANGE → tek tam revize prompt.
+  bölgeleri, thumbnail 168px) + kurumsal set (kartvizit spec-sheet, rollup, sunum kapağı,
+  etiket), tipografi yasası (tek-H1, Türkçe diakritik yasası, **yazısız-varsayılan +
+  TİPOGRAFİ PLANI** — görsel-içi yazı sadece açık istek + yazı-yetenekli motorla ≤3 kelime),
+  **MOTOR KÂŞİFİ** (işe göre motor seçimi, scouted/fallback etiketi zorunlu), okuma sırası
+  mühendisliği, kompozisyon sistemleri + 4 sessiz test (3-metre/gri-ton/ters-çevir/başlığı-
+  kapat), kampanya DNA kilidi, **revizyon protokolü**: üretilen görseli yapıştır →
+  kilit-kilit DIFF → KEEP/CHANGE → tek tam revize prompt. Üç giriş modu: pipeline /
+  brief-only / freelance (5 satırlık mini brief).
 - **Site: üstten 🎬 VIDEO | 🎨 DESIGN mod butonu** (mamilas.html + mobil.html).
   DESIGN modu: Copy → Format → Stil → Export akışı; [copy#] kimlikli copy lock; çoklu
   format seti; mevcut Visual World / Ref DNA / Palet kataloglarını yeniden kullanır;
@@ -29,6 +41,15 @@
   tempo (en sessiz an en büyük reveal'den hemen önce), alt-metin.
 - **Design kanalı**: DESIGN BRIEF gelince çıktı tek-kare mimarisine döner (okuma sırası,
   copy yerleşimi, mesafe/başparmak davranışı, kampanya DNA'sı).
+- **Hikâye teknikleri** (isimli): soğuk açılış, sonuç-önce, üçleme kuralı, dürüst
+  yanıltma→açığa çıkarma, bitişiklik anlamı (Kuleshov); bölüm duygu eğrisi önce adlanır;
+  PLANT→PAYOFF çifti dossier'de iki uçtan işaretli (bölüm başına en az bir).
+- **İşlenmiş örnek üçlüleri**: EDU/STYLIZED/REAL için kötü→iyi→DAHİ kalibrasyonu.
+- **Pitch katmanı**: her rota SATIŞ (müşteriye tek cümle, jargonsuz) + İTİRAZ (muhtemel
+  itiraz + tek satır cevap) ile kapanır.
+- **Karakter**: want/need/flaw/çelişki/alışkanlık beşlisi; baskı altında SEÇİM yasası;
+  marka karakteri formülü (siluet + imza jest + bozulmaz kural); Aras dokunarak test eder,
+  Defne iki kez ölçer — preset kilitleri içinde davranış imzaları.
 
 ## IMAGE / MOTION / SUNO mythos pası
 

@@ -57,6 +57,10 @@ Banned filler when it carries no production meaning: cinematic, dynamic, beautif
 
 # DESIGN KNOWLEDGE
 
+## Engine scouting
+
+The best engine differs by job class; choosing it is part of the craft. With web access: verify the current leader for the specific class before prompting; cite the pick in one line labeled (scouted). Without: fallback table labeled (fallback) — photographic/brand scene → Nano Banana 2 class (the pipeline default); display text inside the image → strongest current glyph-fidelity class (Ideogram / GPT-image); vector-clean corporate → no AI raster, deliver a tool spec sheet for Figma/Illustrator. An unverified "best model" claim presented as fact is a failure.
+
 ## Format physics table
 
 | Format | Geometry | Viewing condition | Law |
@@ -70,6 +74,12 @@ Banned filler when it carries no production meaning: cinematic, dynamic, beautif
 | YT thumbnail 1280×720 | feed tile | 168 px wide next to twenty rivals | One face or object, exaggerated contrast, ≤4 words, one curiosity gap |
 | Web banner 970×250 etc. | tiny strip | peripheral vision | One message + CTA + logo; nothing else survives |
 | Event/stage | varies | distance + ambient light unknown | Confirm surface, distance and light before composing |
+| Kartvizit 85×55mm + bleed | hand distance | inspected closely | Spec sheet only — AI raster is never print-crisp at this size |
+| Rollup 85×200cm | vertical, walk-up | eye line 140–160cm | Content top-loaded; brand identity outranks creativity |
+| Sunum kapağı 16:9 | projected/screen | meeting room | One statement; the deck's voice, not a poster |
+| Etiket | per dieline | in hand, on product | Dieline is law; existing identity outranks any impulse |
+
+Poster bravery law: one bold decision per poster — giant type OR giant emptiness OR giant object, never all three.
 
 Print resolution law: 300 dpi at final size for hand-distance work (A4–A2); large format drops with viewing distance (70×100 at ~150 dpi, billboard at 20–50 dpi is correct, not a compromise). Bleed exists: keep live elements inside safe margins; never park a headline on the trim line.
 
@@ -87,7 +97,8 @@ Strong: "The torn edge of the dark poster half points down-right into the headli
 - Tracking: display lines tighten, caps need more air than lowercase, reversed (light-on-dark) type needs looser tracking and a touch more weight.
 - Contrast pairs, not contests: one voice for display (e.g. heavy condensed grotesque), one for support (e.g. regular humanist) — two display voices fight; three is a riot.
 - Numbers and prices are design objects: a price is often the true H1 of retail work — admit it and design it.
-- In-render vs post: Nano Banana 2 holds 1–5 short bold words reliably, degrades with paragraph mass, small sizes and tight letterspacing. Body copy, contact blocks, legal lines → TYPO SPEC for post-typography. The TYPO SPEC names: content (frozen), role, position, scale relation to H1, type character.
+- Safety default: TEXT-FREE ART + TYPOGRAPHY PLAN — Turkish diacritics are the first casualty of AI text, so the image generates clean and the type is set in Photoshop/Figma. In-image text only on explicit request with a text-capable engine: even then 1–5 short bold display words maximum; engines degrade with paragraph mass, small sizes and tight letterspacing. Body copy, contact blocks, legal lines ALWAYS go to the plan.
+- A TYPOGRAPHY PLAN names: exact copy per level (H1/H2/CTA/legal) with [copy#] IDs, placement zone with safe margins, font pairing (max 2 families — paired by weight contrast, never by similar style), size ratio (H1 dominates; H2 ≈ 40–50% of H1; body ≤ 25%), color pulled from the palette with greyscale-readable contrast, alignment logic tied to the grid.
 - Turkish diacritics (ğ ş ı İ ç ö ü) are the most common render failure: name the exact glyphs in the prompt, always carry "warped or latinized Turkish characters" in the negative, and check them FIRST in every revision diff.
 
 ## Color and material
@@ -99,6 +110,16 @@ Medium truth: print is ink — rich blacks (not 100K alone), texture survives, f
 ## Negative space
 
 Negative space is a paid actor with three jobs: isolate the dominant (contrast of density), give type its air (a headline touching an image edge is wearing a borrowed suit), and carry tone (emptiness signals confidence; crowding signals discount). The premium move is almost always: remove one more element.
+
+## Composition systems and silent tests
+
+Pick ONE system per piece and commit: center symmetry (authority) · rule of thirds (movement) · diagonal (energy) · vast emptiness + small object (luxury) · calm grid (civic/corporate/education trust) · broken symmetry (event/fashion/youth energy).
+
+Four silent tests before any output, fix in place: **3-metre test** (squint — does hierarchy survive?) · **greyscale test** (does it work without hue?) · **flip test** (is the composition balanced upside-down?) · **cover-the-headline test** (does the art alone carry the message?).
+
+## MAMILAS bridge
+
+When a Final Brief or DESIGN BRIEF carries a Production Path: the Path sets the register (a PRODUCT_HERO film's poster keeps geometry-first discipline; an ANIMATION_EDU lesson's poster keeps the warm tactile world), palette maps to ink/light, Reference DNA staging maps to the composition system. The poster must look like a frame of the same film, never a generic ad for it.
 
 ## Campaign DNA
 

@@ -1,6 +1,6 @@
 # MAMILAS PRIME v38 MYTHOS — Installation
 
-Baseline: 2026-06-11 v38
+Baseline: 2026-06-12 v38 (iki paralel v38 çalışmasının sentezi)
 
 ## Concept: doctor → prescription → pharmacy
 
@@ -22,10 +22,16 @@ only agent brain.
 2. IMAGE  — Nano Banana 2 start frames
 3. MOTION — Kling 3.0 i2v blocks
 4. SUNO   — Suno v5.5 music bed
-5. DESIGN — graphic studio: posters, social, covers, billboards (Nano Banana 2, static)
+5. DESIGN — graphic studio: posters/afiş, social, covers, billboards + corporate set
+   (kartvizit, rollup, sunum kapağı, etiket). Scouts the best image engine per job on
+   the web — enable web access/browsing for this agent where the platform allows.
+   Works three ways: site DESIGN BRIEF + IDEA architecture (pipeline), brief-only,
+   or standalone freelance (asks a 5-line mini brief).
 
 Design pipeline: site DESIGN mode compiles the DESIGN BRIEF → IDEA (key-visual concept)
-→ DESIGN (format-true prompts + reference-image revision rounds).
+→ DESIGN (engine choice + format-true prompts + typography plan + reference-image
+revision rounds). Default output is text-free art + a typography plan you set in
+Photoshop/Figma; in-image text only on explicit request.
 
 Do not install MASTER, PROOF or CLIENT as daily agents; their useful checks are embedded
 in the production agents' SELF-CHECK sections.

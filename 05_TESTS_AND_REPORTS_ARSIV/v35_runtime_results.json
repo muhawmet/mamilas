@@ -1,0 +1,349 @@
+{
+  "generatedAt": "2026-06-11T11:15:06.494Z",
+  "counts": {
+    "paths": 17,
+    "projects": 25,
+    "refs": 205,
+    "visuals": 27,
+    "materials": 18
+  },
+  "failures": [],
+  "results": [
+    {
+      "name": "project:education",
+      "path": "ANIMATION_EDU",
+      "world": "clay",
+      "visual": "pixar_feature",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:premium_pixar",
+      "path": "ANIMATION_EDU",
+      "world": "clay",
+      "visual": "pixar_feature",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:science_systems",
+      "path": "ANIMATION_EDU",
+      "world": "lightbox",
+      "visual": "futuristic_glass_ui",
+      "material": "lightbox",
+      "ok": true
+    },
+    {
+      "name": "project:history_national",
+      "path": "ANIMATION_EDU",
+      "world": "museum",
+      "visual": "museum_installation",
+      "material": "museum",
+      "ok": true
+    },
+    {
+      "name": "project:turkish_story",
+      "path": "ANIMATION_EDU",
+      "world": "notebook",
+      "visual": "ghibli_storybook",
+      "material": "notebook",
+      "ok": true
+    },
+    {
+      "name": "project:values_emotion",
+      "path": "ANIMATION_EDU",
+      "world": "fabric",
+      "visual": "ghibli_storybook",
+      "material": "fabric",
+      "ok": true
+    },
+    {
+      "name": "project:stylized_premium",
+      "path": "STYLIZED_PREMIUM",
+      "world": "painterly_shadow",
+      "visual": "arcane_painterly",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:spiderverse_graphic",
+      "path": "STYLIZED_PREMIUM",
+      "world": "graphic_comic",
+      "visual": "spiderverse_texture",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:anime_action",
+      "path": "STYLIZED_PREMIUM",
+      "world": "painterly_shadow",
+      "visual": "anime_cel",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:ultra_real_commercial",
+      "path": "ULTRAREAL_COMMERCIAL",
+      "world": "commercial_studio",
+      "visual": "cinematic_real_commercial",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:product_hero",
+      "path": "PRODUCT_HERO",
+      "world": "product_macro_tabletop",
+      "visual": "macro_product_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:corporate_documentary",
+      "path": "LIVE_ACTION_CORPORATE",
+      "world": "documentary_civic",
+      "visual": "documentary_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:municipality_real",
+      "path": "LIVE_ACTION_CORPORATE",
+      "world": "documentary_civic",
+      "visual": "documentary_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:human_testimonial",
+      "path": "HUMAN_TESTIMONIAL",
+      "world": "human_portrait_real",
+      "visual": "documentary_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:documentary_realism",
+      "path": "DOCUMENTARY_REALISM",
+      "world": "documentary_civic",
+      "visual": "documentary_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:fashion_editorial",
+      "path": "FASHION_EDITORIAL",
+      "world": "luxury_editorial",
+      "visual": "editorial_dark_studio",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:food_macro",
+      "path": "FOOD_MACRO",
+      "world": "food_macro_real",
+      "visual": "macro_product_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:architecture_venue",
+      "path": "ARCHITECTURE_REAL_ESTATE",
+      "world": "architecture_real",
+      "visual": "cinematic_real_commercial",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:tech_medical",
+      "path": "TECH_MEDICAL_PRECISION",
+      "world": "tech_clinical_real",
+      "visual": "clinical_white_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:social_reels",
+      "path": "SOCIAL_REELS_REALISM",
+      "world": "social_reels_real",
+      "visual": "documentary_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:automotive_mobility",
+      "path": "AUTOMOTIVE_MOBILITY",
+      "world": "automotive_stage_real",
+      "visual": "night_urban_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:tourism_destination",
+      "path": "TOURISM_DESTINATION",
+      "world": "tourism_destination_real",
+      "visual": "golden_hour_location",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:health_public",
+      "path": "HEALTH_PUBLIC_SERVICE",
+      "world": "healthcare_public_real",
+      "visual": "documentary_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:event_real",
+      "path": "LIVE_ACTION_CORPORATE",
+      "world": "documentary_civic",
+      "visual": "warm_interior_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "project:brand_story",
+      "path": "ULTRAREAL_COMMERCIAL",
+      "world": "commercial_studio",
+      "visual": "cinematic_real_commercial",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:ANIMATION_EDU",
+      "project": "education",
+      "world": "clay",
+      "visual": "pixar_feature",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:STYLIZED_PREMIUM",
+      "project": "stylized_premium",
+      "world": "painterly_shadow",
+      "visual": "arcane_painterly",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:ULTRAREAL_COMMERCIAL",
+      "project": "ultra_real_commercial",
+      "world": "commercial_studio",
+      "visual": "cinematic_real_commercial",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:LIVE_ACTION_CORPORATE",
+      "project": "municipality_real",
+      "world": "documentary_civic",
+      "visual": "documentary_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:PRODUCT_HERO",
+      "project": "product_hero",
+      "world": "product_macro_tabletop",
+      "visual": "macro_product_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:HUMAN_TESTIMONIAL",
+      "project": "human_testimonial",
+      "world": "human_portrait_real",
+      "visual": "documentary_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:DOCUMENTARY_REALISM",
+      "project": "documentary_realism",
+      "world": "documentary_civic",
+      "visual": "documentary_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:FASHION_EDITORIAL",
+      "project": "fashion_editorial",
+      "world": "luxury_editorial",
+      "visual": "editorial_dark_studio",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:FOOD_MACRO",
+      "project": "food_macro",
+      "world": "food_macro_real",
+      "visual": "macro_product_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:ARCHITECTURE_REAL_ESTATE",
+      "project": "architecture_venue",
+      "world": "architecture_real",
+      "visual": "cinematic_real_commercial",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:TECH_MEDICAL_PRECISION",
+      "project": "tech_medical",
+      "world": "tech_clinical_real",
+      "visual": "clinical_white_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:SOCIAL_REELS_REALISM",
+      "project": "social_reels",
+      "world": "social_reels_real",
+      "visual": "documentary_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:AUTOMOTIVE_MOBILITY",
+      "project": "automotive_mobility",
+      "world": "automotive_stage_real",
+      "visual": "night_urban_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:TOURISM_DESTINATION",
+      "project": "tourism_destination",
+      "world": "tourism_destination_real",
+      "visual": "golden_hour_location",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:HEALTH_PUBLIC_SERVICE",
+      "project": "health_public",
+      "world": "healthcare_public_real",
+      "visual": "documentary_real",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:EPIC_CINEMATIC",
+      "project": "brand_story",
+      "world": "photoreal_location",
+      "visual": "cinematic_real_commercial",
+      "material": "clay",
+      "ok": true
+    },
+    {
+      "name": "path:INSTITUTIONAL_EVENT",
+      "project": "event_real",
+      "world": "real_event_coverage",
+      "visual": "warm_interior_real",
+      "material": "clay",
+      "ok": true
+    }
+  ]
+}

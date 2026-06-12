@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-06-11T11:15:06.551Z",
+  "failures": [],
+  "results": [
+    {
+      "file": "02_GPT_AGENTS/01_IDEA_GPT.md",
+      "bytes": 2990,
+      "under8000": true,
+      "missing": []
+    },
+    {
+      "file": "02_GPT_AGENTS/02_IMAGE_GPT.md",
+      "bytes": 4191,
+      "under8000": true,
+      "missing": []
+    },
+    {
+      "file": "02_GPT_AGENTS/03_MOTION_GPT.md",
+      "bytes": 3459,
+      "under8000": true,
+      "missing": []
+    },
+    {
+      "file": "02_GPT_AGENTS/04_SUNO_GPT.md",
+      "bytes": 3002,
+      "under8000": true,
+      "missing": []
+    },
+    {
+      "file": "03_CLAUDE_AGENTS/01_IDEA_CLAUDE.md",
+      "bytes": 3062,
+      "under8000": true,
+      "missing": []
+    },
+    {
+      "file": "03_CLAUDE_AGENTS/02_IMAGE_CLAUDE.md",
+      "bytes": 4272,
+      "under8000": true,
+      "missing": []
+    },
+    {
+      "file": "03_CLAUDE_AGENTS/03_MOTION_CLAUDE.md",
+      "bytes": 3577,
+      "under8000": true,
+      "missing": []
+    },
+    {
+      "file": "03_CLAUDE_AGENTS/04_SUNO_CLAUDE.md",
+      "bytes": 3070,
+      "under8000": true,
+      "missing": []
+    },
+    {
+      "file": "04_AGENT_KNOWLEDGE/01_IDEA_KNOWLEDGE.md",
+      "bytes": 7726,
+      "under8000": true,
+      "missing": []
+    },
+    {
+      "file": "04_AGENT_KNOWLEDGE/02_IMAGE_KNOWLEDGE.md",
+      "bytes": 7996,
+      "under8000": true,
+      "missing": []
+    },
+    {
+      "file": "04_AGENT_KNOWLEDGE/03_MOTION_KNOWLEDGE.md",
+      "bytes": 7962,
+      "under8000": true,
+      "missing": []
+    },
+    {
+      "file": "04_AGENT_KNOWLEDGE/04_SUNO_KNOWLEDGE.md",
+      "bytes": 6808,
+      "under8000": true,
+      "missing": []
+    }
+  ]
+}

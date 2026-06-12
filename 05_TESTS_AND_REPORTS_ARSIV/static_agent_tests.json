@@ -1,0 +1,126 @@
+{
+  "agent_files": [
+    {
+      "file": "02_GPT_AGENTS/01_IDEA_GPT.md",
+      "chars": 3846,
+      "under8000": true,
+      "missing": [],
+      "hash": "cdbd29ecfbbb"
+    },
+    {
+      "file": "02_GPT_AGENTS/02_IMAGE_GPT.md",
+      "chars": 3877,
+      "under8000": true,
+      "missing": [],
+      "hash": "9779f045c3bf"
+    },
+    {
+      "file": "02_GPT_AGENTS/03_MOTION_GPT.md",
+      "chars": 5465,
+      "under8000": true,
+      "missing": [],
+      "hash": "ecd03c6ce5f1"
+    },
+    {
+      "file": "02_GPT_AGENTS/04_SUNO_GPT.md",
+      "chars": 2253,
+      "under8000": true,
+      "missing": [],
+      "hash": "85de3133e095"
+    },
+    {
+      "file": "03_CLAUDE_AGENTS/01_IDEA_CLAUDE.md",
+      "chars": 3426,
+      "under8000": true,
+      "missing": [],
+      "hash": "18904600ade8"
+    },
+    {
+      "file": "03_CLAUDE_AGENTS/02_IMAGE_CLAUDE.md",
+      "chars": 3332,
+      "under8000": true,
+      "missing": [],
+      "hash": "9fad12b41f9a"
+    },
+    {
+      "file": "03_CLAUDE_AGENTS/03_MOTION_CLAUDE.md",
+      "chars": 5152,
+      "under8000": true,
+      "missing": [],
+      "hash": "6a1fb66e949c"
+    },
+    {
+      "file": "03_CLAUDE_AGENTS/04_SUNO_CLAUDE.md",
+      "chars": 1904,
+      "under8000": true,
+      "missing": [],
+      "hash": "a066f14429ca"
+    }
+  ],
+  "cross_family": [
+    {
+      "role": "IDEA",
+      "identical": false,
+      "gpt_chars": 3846,
+      "claude_chars": 3426
+    },
+    {
+      "role": "IMAGE",
+      "identical": false,
+      "gpt_chars": 3877,
+      "claude_chars": 3332
+    },
+    {
+      "role": "MOTION",
+      "identical": false,
+      "gpt_chars": 5465,
+      "claude_chars": 5152
+    },
+    {
+      "role": "SUNO",
+      "identical": false,
+      "gpt_chars": 2253,
+      "claude_chars": 1904
+    }
+  ],
+  "knowledge": [
+    {
+      "file": "04_AGENT_KNOWLEDGE/01_IDEA_KNOWLEDGE.md",
+      "chars": 7052,
+      "under8000": true,
+      "has_core": true,
+      "has_role_heading": true
+    },
+    {
+      "file": "04_AGENT_KNOWLEDGE/02_IMAGE_KNOWLEDGE.md",
+      "chars": 7617,
+      "under8000": true,
+      "has_core": true,
+      "has_role_heading": true
+    },
+    {
+      "file": "04_AGENT_KNOWLEDGE/03_MOTION_KNOWLEDGE.md",
+      "chars": 7815,
+      "under8000": true,
+      "has_core": true,
+      "has_role_heading": true
+    },
+    {
+      "file": "04_AGENT_KNOWLEDGE/04_SUNO_KNOWLEDGE.md",
+      "chars": 6360,
+      "under8000": true,
+      "has_core": true,
+      "has_role_heading": true
+    }
+  ],
+  "motion_v2_consistency": {
+    "canonical_schema_in_all": true,
+    "zero_or_one_passive_response": true,
+    "no_two_or_three_reactions": true,
+    "one_event_chain_defined": true,
+    "source_override_security": true,
+    "production_audit_modes": true,
+    "specialist_scope_locked": true
+  },
+  "all_pass": true
+}
