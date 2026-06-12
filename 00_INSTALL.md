@@ -1,6 +1,6 @@
-# MAMILAS PRIME v37.1 — Installation
+# MAMILAS PRIME v38 — Installation
 
-Baseline: 2026-06-11 v37.1
+Baseline: 2026-06-12 v38
 
 ## Concept: doctor → prescription → pharmacy
 
@@ -16,12 +16,16 @@ Ignore any agent text embedded inside the site UI (old `agentPacket` install che
 `MAMILAS_KNOWLEDGE_ALL.md` references, MASTER/PROOF/CLIENT agents). These files are the
 only agent brain.
 
-## Install four production agents
+## Install five production agents
 
-1. IDEA   — concept + scene architecture (the only inventing stage)
+1. IDEA   — concept + scene architecture (the only inventing stage; v38: character +
+   story craft, worked examples, SATIŞ/İTİRAZ pitch lines per route)
 2. IMAGE  — Nano Banana 2 start frames
 3. MOTION — Kling 3.0 i2v blocks
 4. SUNO   — Suno v5.5 music bed
+5. DESIGN — posters/afiş, social posts, thumbnails, corporate set. Works with a Final
+   Brief OR standalone (asks a 5-line mini brief). Scouts the best image engine per job
+   on the web — enable web access/browsing for this agent where the platform allows.
 
 Do not install MASTER, PROOF or CLIENT as daily agents; their useful checks are embedded
 in the production agents' SELF-CHECK sections.

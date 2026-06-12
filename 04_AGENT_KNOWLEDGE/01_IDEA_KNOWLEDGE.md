@@ -1,4 +1,4 @@
-# MAMILAS CORE LAWS — PRIME v37.1
+# MAMILAS CORE LAWS — PRIME v38
 
 ## Prescription model
 
@@ -105,6 +105,24 @@ Estimate whether each scene fits one 5–6 second beat. When source meaning, VO 
 ## Character allocation
 
 Plan character appearances across the complete episode before scene writing. Character scenes carry emotion, curiosity, reaction, scale or closure. Never place a character merely because their name begins the VO line. State any manual ratio override in the dossier so IMAGE does not reapply the default.
+
+## Character craft
+
+A character is a walking argument: WANT (visible goal) vs NEED (the change the story knows they require — different things), a FLAW driving the wrong first choice, ONE CONTRADICTION that makes them premium (the brave kid who triple-knots her shoelaces). In silent 5–6s beats, character is revealed only through behavior — what they reach for first, hesitate before, refuse to put down, which path they take unprompted — a CHOICE under small pressure, never a label, speech or pose. Brand characters: one silhouette-readable shape, one signature gesture, one rule they never break. Aras + Defne deepen inside preset locks: Aras tests the world by touching first, Defne measures twice before trusting once — reaction beats are characterful, never generic gasps.
+
+## Story architecture techniques
+
+Name the episode's emotional curve first (e.g., wonder → tension → relief → pride). Then use techniques by name: COLD OPEN (start inside the most interesting consequence) · CONSEQUENCE-FIRST (result before cause; the gap is the curiosity engine) · SETUP–PAYOFF (plant early, pay off at resolution; minimum one pair per episode, both ends marked PLANT/PAYOFF in the dossier) · RULE OF THREE (third repetition breaks the pattern where the message lives) · MISDIRECT→REVEAL (honest misread, fair disclosure) · ADJACENCY MEANING (scene order re-colors each frame; two ordinary shots in the right order beat one spectacular shot).
+
+## Worked calibration triplets
+
+EDU (su döngüsü): WEAK "A diagram of the water cycle with arrows." → STRONG "A soft-clay sea exhales a cotton cloud that wrings itself out over a paper mountain." → GENIUS "The classroom's forgotten tea glass fogs the window; a fingertip draws the fog into a river running back down the glass, and the droplet rejoins the tea — the cycle was on the desk all along."
+STYLIZED: WEAK "A hero stands on a rooftop at sunset." → STRONG "A silhouetted figure plants a flag of light; amber rim cuts blue smoke." → GENIUS "Lit windows go dark across the city until the remaining lights form the hero's emblem; the rooftop figure only lifts their head." (the world performs the character)
+REAL (kahve): WEAK "Steaming coffee cup, morning light." → STRONG "A barista's palm rests on the grinder until its hum settles; the first pour folds in ribbons." → GENIUS "The espresso machine's pressure needle trembles at the red line, then eases — and across the counter a tired customer's shoulders ease at exactly the same moment." (machine mirrored to human = the promise without a word)
+
+## Pitch layer
+
+Every route ends with SATIŞ: one client-facing sentence on why this route wins, in audience/money terms with zero jargon; and İTİRAZ: the likeliest client objection with a one-line answer. These lines are written to be read aloud to a client unedited.
 
 ## Creative bar
 
